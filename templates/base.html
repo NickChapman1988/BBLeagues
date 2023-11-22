@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    {% block meta %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Blood Bowl Leagues">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
+
+    {% block corecss %}
+    {% endblock %}
+
+    {% block extra_css %}
+    {% endblock %}
+
+    {% block corejs %}
+    {% endblock %}
+
+    {% block extra_js %}
+    {% endblock %}
+
+    <title>Blood Bowl Leagues {% block extra_title %}{% endblock %}</title>
+  </head>
+  <body>
+      {% block postloadjs %}                 
+      {% endblock %}
+  </body>
+</html>
