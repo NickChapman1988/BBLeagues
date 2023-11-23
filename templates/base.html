@@ -38,8 +38,46 @@
     <title>Blood Bowl Leagues {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <header class="container-fluid fixed-top"></header>
+    <header class="container-fluid">
+      <div id="topnav" class="row pt-lg-2 d-lg-flex">
+        <!-- Logo -->
+        <div class="col-12 col-lg-10 my-auto py-1 text-center">
+          <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <h2 class="logo-font"><strong>BB Leagues</strong></h2>
+          </a>
+        </div>
+         <!-- Account and Cart Buttons -->
+         <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li class="list-inline-item dropdown">
+              <a href="#" class="text-black nav-link" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <p class="my-0">My Account</p>
+                </div>
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                  <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <nav class="navbar navbar-expand-lg">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        </nav>
+      </div>
+    </header>
     {% if messages %}
       <div class="message-container"></div>
     {% endif %}
