@@ -1,0 +1,61 @@
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto align-items-start">
+        <li class="nav-item d-block d-lg-none">
+            <a class="logo-font btn fw-bold nav-link me-5" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
+        <!-- All Leagues -->
+        <li class="nav-item dropdown">
+            <a class="logo-font btn fw-bold nav-link me-5" href="#" id="all-leagues-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Leagues
+            </a>
+        </li>         
+        
+        <!-- My Leagues -->
+        <li class="nav-item dropdown">
+            <a class="logo-font btn fw-bold nav-link me-5" href="#" id="my-leagues-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Leagues
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="my-leagues-link">
+                {% for league in leagues %}
+                    <a href="#" class="dropdown-item">{league name}</a>
+                {% endfor %}
+            </div>
+        </li>
+
+        <!-- My Teams -->
+        <li class="nav-item dropdown">
+            <a class="logo-font btn fw-bold nav-link me-5" href="#" id="my-teams-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Teams
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="my-teams-link">
+                {% for team in teams %}
+                    <a href="#" class="dropdown-item">{team name}</a>
+                {% endfor %}
+                
+            </div>
+        </li>
+        
+        <!-- League Commissioner Admin -->
+        <li class="nav-item dropdown">
+            <a class="logo-font btn fw-bold nav-link me-5" href="#" id="materials-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Manage my Leagues
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="materials-link">
+            {% for league in commission_leagues %}
+                <a href="#" class="dropdown-item">{league name}</a>
+            {% endfor %}
+                
+            </div>
+        </li>
+        {% if request.user.is_superuser %}
+        <!-- Admin Panel -->
+        <li class="nav-item dropdown">
+            <a class="logo-font btn fw-bold nav-link me-5" href="#" id="admin-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Admin Control Panel
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</div>

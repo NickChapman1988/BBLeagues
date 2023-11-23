@@ -39,16 +39,19 @@
   </head>
   <body>
     <header class="container-fluid">
-      <div id="topnav" class="row pt-lg-2 d-lg-flex">
+      <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
         <!-- Logo -->
-        <div class="col-12 col-lg-10 my-auto py-1 text-center">
+        <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
+          
+        </div>
+        <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 text-center">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
             <h2 class="logo-font"><strong>BB Leagues</strong></h2>
           </a>
         </div>
          <!-- Account and Cart Buttons -->
          <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <ul class="list-inline list-unstyled text-center text-lg-end my-0">
             <li class="list-inline-item dropdown">
               <a href="#" class="text-black nav-link" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
@@ -58,7 +61,7 @@
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
-                  <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                  <a href="{% url 'home' %}" class="dropdown-item">My Profile</a>
                   <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                 {% else %}
                   <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -74,7 +77,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-
+          {% include 'includes/main-nav.html' %}
         </nav>
       </div>
     </header>
