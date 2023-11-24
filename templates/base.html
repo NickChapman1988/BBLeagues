@@ -39,21 +39,21 @@
   </head>
   <body>
     <header class="container-fluid">
-      <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
+      <div id="topnav" class="row d-none d-lg-flex">
         <!-- Logo -->
-        <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
+        <div class="col-12 col-lg-2 my-auto ">
 
         </div>
-        <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 text-center">
+        <div class="col-12 col-lg-8 my-auto text-center">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font"><strong>BB Leagues</strong></h2>
+            <h1 class="title">BB Leagues</h1>
           </a>
         </div>
          <!-- Account Button -->
-         <div class="col-12 col-lg-2 my-auto py-1 py-lg-0">
-          <ul class="list-inline list-unstyled text-center text-lg-end my-0">
+         <div class="col-12 col-lg-2 my-auto">
+          <ul class="list-inline list-unstyled text-center my-0">
             <li class="list-inline-item dropdown">
-              <a href="#" class="text-black nav-link" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a href="#" class="nav-link" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                   <div><i class="fas fa-user fa-lg"></i></div>
                   <p class="my-0">My Account</p>
@@ -75,7 +75,7 @@
       <div class="color-bg d-lg-none"></div>
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler ms-4" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="custom-toggler-icon"><i class="fa-solid fa-bars"></i></span>
           </button>
           {% include 'includes/mobile-top-header.html' %}

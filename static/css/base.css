@@ -1,41 +1,52 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f3f3;
+  color: #10122b;
+  overflow-x: hidden;
+}
+
+.container-fluid, .row, .col {
+  padding: 0;
+  margin: 0;
+}
+
+/*------------------------------------- Header ------------------------ */
+#topnav {
+  background: linear-gradient(#143e7a 50%, #b3110f 50%);
+  height: 96px;
+  align-content: center;
+}
+
+.title {
+  color: #c9dfec;
+  font-size: 4rem;
 }
 
 .color-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 96px;
-    background: linear-gradient(#143e7a 50%, #b3110f 50%);
-}
-
-#topnav {
-    background: linear-gradient(#143e7a 50%, #b3110f 50%);
-    height: 96px;
-}
-
-@media (min-width: 992px){
-    .navbar {
-        background-color: #c9dfec;
-    }
-    .nav-item > a {
-        color: #10122b;
-    }
-}
-
-.nav-link {
-    color: #10122b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96px;
+  background: linear-gradient(#143e7a 50%, #b3110f 50%);
 }
 
 .navbar-toggler, .custom-toggler-icon {
-    color: #c9dfec;
+  color: #c9dfec;
 }
 
 .navbar-toggler {
-    border: 1px solid #c9dfec;
+  border: 1px solid #c9dfec;
 }
+
+@media (min-width: 992px) {
+  .navbar {
+    background-color: #c9dfec;
+  }
+}/*# sourceMappingURL=base.css.map */

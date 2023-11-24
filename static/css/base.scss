@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+$color-blue: #143e7a;
+$color-red: #b3110f;
+$color-pale-blue: #c9dfec;
+$color-light: #f9f3f3;
+$color-dark: #10122b;
+$stripe-bg: linear-gradient($color-blue 50%, $color-red 50%);
+
+
+body {
+    background-color: $color-light;
+    color: $color-dark;
+    overflow-x: hidden;
+}
+
+.container-fluid, .row, .col {
+    padding: 0;
+    margin: 0;
+}
+
+/*------------------------------------- Header ------------------------ */
+
+#topnav {
+    background: $stripe-bg;
+    height: 96px;
+    align-content: center;
+}
+
+.title {
+    color: $color-pale-blue;
+    font-size: 4rem;
+}
+
+.color-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    background: $stripe-bg;
+}
+
+.navbar-toggler, .custom-toggler-icon {
+    color: $color-pale-blue;
+}
+
+.navbar-toggler {
+    border: 1px solid $color-pale-blue;
+}
+
+@media (min-width: 992px){
+    .navbar {
+        background-color: $color-pale-blue;
+    }
+}
