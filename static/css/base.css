@@ -58,6 +58,14 @@ body {
   margin-left: 10px;
 }
 
+.account-div {
+  color: #c9dfec;
+  font-size: 18px;
+}
+.account-div p {
+  font-weight: 700;
+}
+
 /*---------------------- Footer ---------*/
 footer {
   background: linear-gradient(#143e7a 50%, #b3110f 50%);
