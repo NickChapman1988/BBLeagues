@@ -17,6 +17,9 @@ body {
     background-color: $color-light;
     color: $color-dark;
     overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container-fluid, .row, .col {
@@ -57,5 +60,23 @@ body {
 @media (min-width: 992px){
     .navbar {
         background-color: $color-pale-blue;
+        padding: 0;
+    }
+}
+
+/*---------------------- Footer ---------*/
+
+footer {
+    background: $stripe-bg;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 96px;
+    color: $color-light;
+    font-size: 18px;
+    .copyright a {
+        text-decoration: none;
+        color: $color-pale-blue;
+        font-weight: 700;
     }
 }

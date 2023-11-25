@@ -87,17 +87,17 @@
     {% if messages %}
       <div class="message-container"></div>
     {% endif %}
-
+    <main>
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
-
-    <footer class="container-fluid mt-5 py-3">
+    </main>
+    <footer class="container-fluid d-flex mt-5 py-3 justify-content-center align-items-center">
       {% include 'includes/footer.html' %}
     </footer>
-    
+
     {% block postloadjs %}  
     {% endblock %}
   </body>

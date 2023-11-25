@@ -9,6 +9,9 @@ body {
   background-color: #f9f3f3;
   color: #10122b;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container-fluid, .row, .col {
@@ -48,5 +51,21 @@ body {
 @media (min-width: 992px) {
   .navbar {
     background-color: #c9dfec;
+    padding: 0;
   }
+}
+/*---------------------- Footer ---------*/
+footer {
+  background: linear-gradient(#143e7a 50%, #b3110f 50%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 96px;
+  color: #f9f3f3;
+  font-size: 18px;
+}
+footer .copyright a {
+  text-decoration: none;
+  color: #c9dfec;
+  font-weight: 700;
 }/*# sourceMappingURL=base.css.map */
