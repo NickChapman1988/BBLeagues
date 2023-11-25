@@ -54,6 +54,10 @@ body {
     padding: 0;
   }
 }
+.main-nav-link {
+  margin-left: 10px;
+}
+
 /*---------------------- Footer ---------*/
 footer {
   background: linear-gradient(#143e7a 50%, #b3110f 50%);

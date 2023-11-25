@@ -1,20 +1,20 @@
     
     <div class="collapse navbar-collapse" id="main-nav">
         <ul class="navbar-nav w-auto mx-auto align-items-start">
-            <li class="nav-item">
+            <li class="nav-item dropdown main-nav-link">
                 <a class="logo-font btn fw-bold nav-link me-5" href="{% url 'home' %}" id="home-link">
                     Home
                 </a>
             </li>
             <!-- All Leagues -->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown main-nav-link">
                 <a class="logo-font btn fw-bold nav-link me-5" href="#" id="all-leagues-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     All Leagues
                 </a>
             </li>         
             
             <!-- My Leagues -->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown main-nav-link">
                 <a class="logo-font btn fw-bold nav-link me-5" href="#" id="my-leagues-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     My Leagues
                 </a>
@@ -26,7 +26,7 @@
             </li>
     
             <!-- My Teams -->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown main-nav-link">
                 <a class="logo-font btn fw-bold nav-link me-5" href="#" id="my-teams-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     My Teams
                 </a>
@@ -39,7 +39,7 @@
             </li>
             
             <!-- League Commissioner Admin -->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown main-nav-link">
                 <a class="logo-font btn fw-bold nav-link me-5" href="#" id="manage-leagues-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Manage my Leagues
                 </a>
@@ -52,7 +52,7 @@
             </li>
             {% if request.user.is_superuser %}
             <!-- Admin Panel -->
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown main-nav-link">
                 <a class="logo-font btn fw-bold nav-link me-5" href="#" id="admin-link" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Admin Control Panel
                 </a>
