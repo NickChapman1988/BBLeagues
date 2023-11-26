@@ -10,7 +10,7 @@ $color-red: #b3110f;
 $color-pale-blue: #c9dfec;
 $color-light: #f9f3f3;
 $color-dark: #10122b;
-$stripe-bg: linear-gradient($color-blue 50%, $color-red 50%);
+$stripe-bg: linear-gradient(#294f8d 25%, #123056 50%, #d23836 50%, #840c0d 100%);
 
 
 body {
@@ -67,13 +67,11 @@ body {
         border-radius: 5px;
         color: #10122b;
         font-weight: bold;
-        /*margin: 5px 0;*/
         padding: .5em 2em;
         position: relative;
         text-align: center;
         text-decoration: none;
         z-index: 1;
-        /*text-shadow: 0 1px 1px #10122b;*/
     }
       
     .nav-btn:before {
@@ -88,7 +86,8 @@ body {
         z-index: -1;
         border-radius: 10px;
         background-image: linear-gradient(to bottom, #ccdff0 0%, #6997bb 40%);
-        box-shadow: 0px -1px 2px 0 #065881 inset, 0px 1px 1px 1px #ccc;
+        box-shadow: 0px -1px 2px 0 #065881 inset, 
+                    0px 1px 1px 1px #ccc;
     }
       
     .nav-btn:hover {
