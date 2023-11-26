@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -20,11 +23,16 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container-fluid, .row, .col {
     padding: 0;
     margin: 0;
+}
+
+.logo-font {
+    font-family: 'Graduate', serif;
 }
 
 /*------------------------------------- Header ------------------------ */
@@ -66,8 +74,6 @@ body {
         background-color: #c9dfec;
         border-radius: 5px;
         color: #10122b;
-        font-weight: bold;
-        padding: .5em 2em;
         position: relative;
         text-align: center;
         text-decoration: none;

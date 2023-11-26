@@ -46,7 +46,7 @@
         </div>
         <div class="col-12 col-lg-8 my-auto text-center">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h1 class="title">BB Leagues</h1>
+            <h1 class="title logo-font">BB Leagues</h1>
           </a>
         </div>
          <!-- Account Button -->
@@ -56,16 +56,16 @@
               <a href="#" class="nav-link" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="account-div text-center">
                   <div><i class="fas fa-user fa-lg"></i></div>
-                  <p class="my-0">My Account</p>
+                  <p class="my-0 logo-font">My Account</p>
                 </div>
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
-                  <a href="{% url 'home' %}" class="dropdown-item">My Profile</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                  <a href="{% url 'home' %}" class="dropdown-item logo-font">My Profile</a>
+                  <a href="{% url 'account_logout' %}" class="dropdown-item logo-font">Logout</a>
                 {% else %}
-                  <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                  <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                  <a href="{% url 'account_signup' %}" class="dropdown-item logo-font">Register</a>
+                  <a href="{% url 'account_login' %}" class="dropdown-item logo-font">Login</a>
                 {% endif %}
               </div>
             </li>
