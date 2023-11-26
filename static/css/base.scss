@@ -62,6 +62,42 @@ body {
         background-color: $color-pale-blue;
         padding: 0;
     }
+    .nav-btn {
+        background-color: #c9dfec;
+        border-radius: 5px;
+        color: #10122b;
+        font-weight: bold;
+        /*margin: 5px 0;*/
+        padding: .5em 2em;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        z-index: 1;
+        /*text-shadow: 0 1px 1px #10122b;*/
+    }
+      
+    .nav-btn:before {
+        content: "";
+        display: block;
+        background-color: #c9dfec;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        bottom: -5px;
+        right: -5px;
+        z-index: -1;
+        border-radius: 10px;
+        background-image: linear-gradient(to bottom, #ccdff0 0%, #6997bb 40%);
+        box-shadow: 0px -1px 2px 0 #065881 inset, 0px 1px 1px 1px #ccc;
+    }
+      
+    .nav-btn:hover {
+        background: #6997bb;
+    }
+      
+    .nav-btn:hover:before {
+        background-image: linear-gradient(to bottom, #c9dfec 0%, #0082C6 40%);
+    }
 }
 
 .main-nav-link {
