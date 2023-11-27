@@ -46,6 +46,16 @@ body {
 .title {
     color: $color-pale-blue;
     font-size: 4rem;
+    text-shadow: 2px 2px $color-dark;
+}
+
+.account-div {
+    p {
+        text-shadow: 2px 2px $color-dark;
+    }
+    i {
+        font-size: 30px;
+    }
 }
 
 .color-bg {
@@ -78,6 +88,7 @@ body {
         text-align: center;
         text-decoration: none;
         z-index: 1;
+        text-shadow: 1px 1px $color-pale-blue;
     }
       
     .nav-btn:before {
