@@ -73,10 +73,6 @@ main {
   margin-left: 10px;
 }
 
-.bg-pale {
-  background-color: #f9f3f3;
-}
-
 @media (min-width: 992px) {
   .navbar {
     background-color: #c9dfec;
@@ -113,10 +109,14 @@ main {
     background-image: linear-gradient(to bottom, #c9dfec 0%, #0082C6 40%);
   }
 }
-/* Move menu left to prevent overflow off screen */
-@media (min-width: 992px) {
+@media (max-width: 991px) {
+  /* Move menu left to prevent overflow off screen */
   #user-options-dropdown {
     left: -30px;
+  }
+  /* Add background to dropdown menu to match page background */
+  .bg-pale {
+    background-color: #f9f3f3;
   }
 }
 /*---------------------- Footer ---------*/
