@@ -1,6 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container pt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="display-4 logo-font">
+                Welcome to BB Leagues!
+            </h2>
+        </div>
+    </div>
+</div>
+{% endblock %}
 {% block content %}
-    <h1 class="display-4 text-success">It works!</h1>
+    <div class="container main-page-text mt-5">
+        <div class="row">
+            <div class="col col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
+                <p>
+                    BB Leagues is a site for setting up and managing your fantasy football leagues!
+                </p>
+                <p>
+                    Use this site to create your teams, manage your players and keep an eye on your league position. 
+                    League Commissioners can manage their leagues and record the results of games. 
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

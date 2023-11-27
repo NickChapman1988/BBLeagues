@@ -16,13 +16,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.container-fluid, .row, .col {
-  padding: 0;
-  margin: 0;
-}
-
 .logo-font {
   font-family: "Graduate", serif;
+}
+
+main {
+  min-height: 100svh;
 }
 
 /*------------------------------------- Header ------------------------ */
@@ -38,11 +37,15 @@ body {
   text-shadow: 2px 2px #10122b;
 }
 
+.account-div {
+  color: #c9dfec;
+}
 .account-div p {
   text-shadow: 2px 2px #10122b;
+  font-weight: 700;
 }
 .account-div i {
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .color-bg {
@@ -60,6 +63,18 @@ body {
 
 .navbar-toggler {
   border: 1px solid #c9dfec;
+}
+
+#main-nav {
+  z-index: 1;
+}
+
+.main-nav-link {
+  margin-left: 10px;
+}
+
+.bg-pale {
+  background-color: #f9f3f3;
 }
 
 @media (min-width: 992px) {
@@ -98,18 +113,12 @@ body {
     background-image: linear-gradient(to bottom, #c9dfec 0%, #0082C6 40%);
   }
 }
-.main-nav-link {
-  margin-left: 10px;
+/* Move menu left to prevent overflow off screen */
+@media (min-width: 992px) {
+  #user-options-dropdown {
+    left: -30px;
+  }
 }
-
-.account-div {
-  color: #c9dfec;
-  font-size: 18px;
-}
-.account-div p {
-  font-weight: 700;
-}
-
 /*---------------------- Footer ---------*/
 footer {
   background: linear-gradient(#294f8d 25%, #123056 50%, #d23836 50%, #840c0d 100%);
@@ -118,7 +127,6 @@ footer {
   left: 0;
   height: 96px;
   color: #f9f3f3;
-  font-size: 18px;
   font-family: "Graduate", serif;
   text-shadow: 1px 1px #10122b;
 }
@@ -126,4 +134,9 @@ footer .copyright a {
   text-decoration: none;
   color: #c9dfec;
   font-weight: 700;
+}
+
+/*---------------------- Homepage ------------*/
+.header-container {
+  margin-top: 260px;
 }/*# sourceMappingURL=base.css.map */

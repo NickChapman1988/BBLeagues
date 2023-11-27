@@ -26,13 +26,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.container-fluid, .row, .col {
-    padding: 0;
-    margin: 0;
-}
-
 .logo-font {
     font-family: 'Graduate', serif;
+}
+
+main {
+    min-height: 100svh;
 }
 
 /*------------------------------------- Header ------------------------ */
@@ -50,11 +49,13 @@ body {
 }
 
 .account-div {
+    color: $color-pale-blue;
     p {
         text-shadow: 2px 2px $color-dark;
+        font-weight: 700;
     }
     i {
-        font-size: 30px;
+         font-size: 24px;
     }
 }
 
@@ -73,6 +74,18 @@ body {
 
 .navbar-toggler {
     border: 1px solid $color-pale-blue;
+}
+
+#main-nav {
+    z-index: 1;
+}
+
+.main-nav-link {
+    margin-left: 10px;
+}
+
+.bg-pale {
+    background-color: $color-light;
 }
 
 @media (min-width: 992px){
@@ -116,16 +129,10 @@ body {
     }
 }
 
-.main-nav-link {
-    margin-left: 10px;
-}
-
-.account-div {
-    color: $color-pale-blue;
-    font-size: 18px;
-    p {
-        font-weight: 700;
-
+ /* Move menu left to prevent overflow off screen */
+@media (min-width: 992px){
+    #user-options-dropdown {
+        left: -30px;
     }
 }
 
@@ -138,7 +145,6 @@ footer {
     left: 0;
     height: 96px;
     color: $color-light;
-    font-size: 18px;
     font-family: 'Graduate', serif;
     text-shadow: 1px 1px $color-dark;
     .copyright a {
@@ -146,4 +152,10 @@ footer {
         color: $color-pale-blue;
         font-weight: 700;
     }
+}
+
+/*---------------------- Homepage ------------*/
+
+.header-container {
+    margin-top: 260px;
 }

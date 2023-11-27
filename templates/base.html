@@ -38,7 +38,7 @@
     <title>Blood Bowl Leagues {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid mb-2">
+    <header class="container-fluid fixed-top mb-2 g-0">
       <div id="topnav" class="row d-none d-lg-flex">
         <!-- Logo -->
         <div class="col-12 col-lg-2 my-auto ">
@@ -87,7 +87,7 @@
     {% if messages %}
       <div class="message-container"></div>
     {% endif %}
-    <main>
+    <main class="d-flex flex-column">
     {% block page_header %}
     {% endblock %}
 
