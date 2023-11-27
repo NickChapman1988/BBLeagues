@@ -9,11 +9,11 @@
         <div class="dropdown-menu border-0" aria-labelledby="user-options-mob" id="user-options-dropdown">
             {% if request.user.is_authenticated %}
             
-            <a href="{% url 'home' %}" class="dropdown-item">My Profile</a>
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            <a href="{% url 'home' %}" class="dropdown-item logo-font">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item logo-font">Logout</a>
             {% else %}
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item logo-font">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item logo-font">Login</a>
             {% endif %}
         </div>
     </li>
