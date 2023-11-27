@@ -139,6 +139,8 @@ footer {
     height: 96px;
     color: $color-light;
     font-size: 18px;
+    font-family: 'Graduate', serif;
+    text-shadow: 1px 1px $color-dark;
     .copyright a {
         text-decoration: none;
         color: $color-pale-blue;

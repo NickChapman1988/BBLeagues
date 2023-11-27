@@ -119,6 +119,8 @@ footer {
   height: 96px;
   color: #f9f3f3;
   font-size: 18px;
+  font-family: "Graduate", serif;
+  text-shadow: 1px 1px #10122b;
 }
 footer .copyright a {
   text-decoration: none;
