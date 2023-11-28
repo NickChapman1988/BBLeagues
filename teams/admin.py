@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Position, Team
+from .models import Position, Team, MemberTeam, Player
 
 # Register your models here.
 
@@ -36,5 +36,29 @@ class TeamAdmin(admin.ModelAdmin):
     ordering = ('team',)
 
 
+class MemberTeamAdmin(admin.ModelAdmin):
+    """ Admin for the MemberTeam model """
+    list_display = (
+        'manager',
+        'team_name',
+        'team',
+    )
+
+    ordering = ('manager',)
+
+
+class PlayerAdmin(admin.ModelAdmin):
+    """ Admin for the Player model """
+    list_display = (
+        'player_name',
+        'team_name',
+        'position',
+    )
+
+    ordering = ('team_name',)
+
+
 admin.site.register(Position, PositionAdmin)
 admin.site.register(Team, TeamAdmin)
+admin.site.register(MemberTeam, MemberTeamAdmin)
+admin.site.register(Player, PlayerAdmin)
