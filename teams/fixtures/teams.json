@@ -1,0 +1,277 @@
+[
+ {
+   "id": 1,
+   "model": "teams.team",
+   "fields": {
+      "team": "Black Orcs",
+      "reroll_cost": 60000,
+      "special_rules": "Badlands Brawl, Bribery and Corruption",
+      "tier": 2,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 2,
+   "model": "teams.team",
+   "fields": {
+      "team": "Chaos Chosen",
+      "reroll_cost": 60000,
+      "special_rules": "Favoured of (Chaos Undivided, Khorne, Nurgle, Slaanesh or Tzeentch)",
+      "tier": 2,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 3,
+   "model": "teams.team",
+   "fields": {
+      "team": "Chaos Renegades",
+      "reroll_cost": 70000,
+      "special_rules": "Favoured of (Chaos Undivided, Khorne, Nurgle, Slaanesh or Tzeentch)",
+      "tier": 2,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 4,
+   "model": "teams.team",
+   "fields": {
+      "team": "Dark Elves",
+      "reroll_cost": 50000,
+      "special_rules": "Elven Kingdoms League",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 5,
+   "model": "teams.team",
+   "fields": {
+      "team": "Dwarfs",
+      "reroll_cost": 50000,
+      "special_rules": "Old World Classic, Worlds Edge Superleague",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 6,
+   "model": "teams.team",
+   "fields": {
+      "team": "Elven Union",
+      "reroll_cost": 50000,
+      "special_rules": "Elven Kingdoms League",
+      "tier": 2,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 7,
+   "model": "teams.team",
+   "fields": {
+      "team": "Goblins",
+      "reroll_cost": 60000,
+      "special_rules": "Badlands Brawl, Bribery and Corruption, Underworld Challenge",
+      "tier": 3,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 8,
+   "model": "teams.team",
+   "fields": {
+      "team": "Halflings",
+      "reroll_cost": 60000,
+      "special_rules": "Halfling Thimble Cup, Old World Classic",
+      "tier": 3,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 9,
+   "model": "teams.team",
+   "fields": {
+      "team": "Humans",
+      "reroll_cost": 50000,
+      "special_rules": "Old World Classic",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 10,
+   "model": "teams.team",
+   "fields": {
+      "team": "Imperial Nobility",
+      "reroll_cost": 70000,
+      "special_rules": "Old World Classic",
+      "tier": 2,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 11,
+   "model": "teams.team",
+   "fields": {
+      "team": "Lizardmen",
+      "reroll_cost": 70000,
+      "special_rules": "Lustrian Superleague",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 12,
+   "model": "teams.team",
+   "fields": {
+      "team": "Necromantic Horrors",
+      "reroll_cost": 70000,
+      "special_rules": "Masters of Undeath, Sylvanian Spotlight",
+      "tier": 2,
+      "apothecary": "NO"
+   }
+},
+ {
+   "id": 13,
+   "model": "teams.team",
+   "fields": {
+      "team": "Nurgle",
+      "reroll_cost": 70000,
+      "special_rules": "Favoured of Nurgle",
+      "tier": 2,
+      "apothecary": "NO"
+   }
+},
+ {
+   "id": 14,
+   "model": "teams.team",
+   "fields": {
+      "team": "Ogres",
+      "reroll_cost": 70000,
+      "special_rules": "Badlands Brawl, Low Cost Linemen, Old World Classic",
+      "tier": 3,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 15,
+   "model": "teams.team",
+   "fields": {
+      "team": "Old World Alliance",
+      "reroll_cost": 70000,
+      "special_rules": "Old World Classic",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 16,
+   "model": "teams.team",
+   "fields": {
+      "team": "Orcs",
+      "reroll_cost": 60000,
+      "special_rules": "Badlands Brawl",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 17,
+   "model": "teams.team",
+   "fields": {
+      "team": "Shambling Undead",
+      "reroll_cost": 70000,
+      "special_rules": "Masters of Undeath, Sylvanian Spotlight",
+      "tier": 1,
+      "apothecary": "NO"
+   }
+},
+ {
+   "id": 18,
+   "model": "teams.team",
+   "fields": {
+      "team": "Skaven",
+      "reroll_cost": 50000,
+      "special_rules": "Underworld Challenge",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 19,
+   "model": "teams.team",
+   "fields": {
+      "team": "Snotlings",
+      "reroll_cost": 60000,
+      "special_rules": "Bribery and Corruption, Low Cost Linemen, Underworld Challenge",
+      "tier": 3,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 20,
+   "model": "teams.team",
+   "fields": {
+      "team": "Underworld Denizens",
+      "reroll_cost": 70000,
+      "special_rules": "Bribery and Corruption, Underworld Challenge",
+      "tier": 2,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 21,
+   "model": "teams.team",
+   "fields": {
+      "team": "Wood Elves",
+      "reroll_cost": 50000,
+      "special_rules": "Elven Kingdoms League",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 22,
+   "model": "teams.team",
+   "fields": {
+      "team": "Amazons",
+      "reroll_cost": 60000,
+      "special_rules": "Lustrian Superleague",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 23,
+   "model": "teams.team",
+   "fields": {
+      "team": "Norse",
+      "reroll_cost": 60000,
+      "special_rules": "Favoured of (Chaos Undivided or Khorne), Old World Classic",
+      "tier": 1,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 24,
+   "model": "teams.team",
+   "fields": {
+      "team": "Vampires",
+      "reroll_cost": 60000,
+      "special_rules": "Sylvanian Spotlight, Vampire Lord",
+      "tier": 2,
+      "apothecary": "YES"
+   }
+},
+ {
+   "id": 25,
+   "model": "teams.team",
+   "fields": {
+      "team": "Khorne",
+      "reroll_cost": 60000,
+      "special_rules": "Favoured of Khorne",
+      "tier": 2,
+      "apothecary": "YES"
+   }
+}
+]

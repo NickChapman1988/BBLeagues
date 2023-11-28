@@ -1,0 +1,2450 @@
+[
+ {
+   "id": 1,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Goblin Bruiser Lineman",
+      "cost": 45000,
+      "max_qty": 12,
+      "team": 1,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge, Right Stuff, Stunty, Thick Skull",
+      "primary_skills": "A",
+      "secondary_skills": "GPS"
+   }
+},
+ {
+   "id": 2,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Black Orc",
+      "cost": 90000,
+      "max_qty": 6,
+      "team": 1,
+      "ma": 4,
+      "st": 4,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Brawler, Grab",
+      "primary_skills": "GS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 3,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Trained Troll",
+      "cost": 115000,
+      "max_qty": 1,
+      "team": 1,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": 5,
+      "av": 10,
+      "skills": "Always Hungry, Loner (3+), Mighty Blow (+1), Projectile Vomit, Really Stupid, Regeneration, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AGP"
+   }
+},
+ {
+   "id": 4,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Beastman Runner Lineman",
+      "cost": 60000,
+      "max_qty": 16,
+      "team": 2,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Horns",
+      "primary_skills": "GMS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 5,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Chosen Blocker",
+      "cost": 100000,
+      "max_qty": 4,
+      "team": 2,
+      "ma": 5,
+      "st": 4,
+      "ag": 3,
+      "pa": 5,
+      "av": 10,
+      "skills": "",
+      "primary_skills": "GMS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 6,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Chaos Troll",
+      "cost": 115000,
+      "max_qty": 1,
+      "team": 2,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": 5,
+      "av": 10,
+      "skills": "Always Hungry, Loner (4+), Mighty Blow (+1), Projectile Vomit, Really Stupid, Regeneration, Throw Team-mate",
+      "primary_skills": "MS",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 7,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Chaos Ogre",
+      "cost": 140000,
+      "max_qty": 1,
+      "team": 2,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Bone Head, Loner (4+), Mighty Blow (+1), Thick Skull, Throw Team-mate",
+      "primary_skills": "MS",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 8,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Minotaur",
+      "cost": 150000,
+      "max_qty": 1,
+      "team": 2,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Loner (4+), Frenzy, Horns, Mighty Blow (+1), Thick Skull, Unchannelled Fury",
+      "primary_skills": "MS",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 9,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Human Lineman",
+      "cost": 50000,
+      "max_qty": 12,
+      "team": 3,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "",
+      "primary_skills": "GM",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 10,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Human Thrower",
+      "cost": 75000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 3,
+      "av": 9,
+      "skills": "Animosity (all team-mates), Pass, Safe Pair of Hands",
+      "primary_skills": "GMP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 11,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Goblin",
+      "cost": 40000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Animosity (all team-mates), Dodge, Right Stuff, Stunty",
+      "primary_skills": "AM",
+      "secondary_skills": "GP"
+   }
+},
+ {
+   "id": 12,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Orc",
+      "cost": 50000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 5,
+      "st": 3,
+      "ag": 3,
+      "pa": 5,
+      "av": 10,
+      "skills": "Animosity (all team-mates)",
+      "primary_skills": "GM",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 13,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Skaven",
+      "cost": 50000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Animosity (all team-mates)",
+      "primary_skills": "GM",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 14,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Dark Elf",
+      "cost": 75000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 6,
+      "st": 3,
+      "ag": 2,
+      "pa": 3,
+      "av": 9,
+      "skills": "Animosity (all team-mates)",
+      "primary_skills": "AGM",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 15,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Troll",
+      "cost": 115000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": 5,
+      "av": 10,
+      "skills": "Always Hungry, Loner (4+), Mighty Blow (+1), Projectile Vomit, Really Stupid, Regeneration, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AGM"
+   }
+},
+ {
+   "id": 16,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Ogre",
+      "cost": 140000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Bone Head, Loner (4+), Mighty Blow (+1), Thick Skull, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AGM"
+   }
+},
+ {
+   "id": 17,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Minotaur",
+      "cost": 150000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Loner (4+), Frenzy, Horns, Mighty Blow (+1), Thick Skull, Unchannelled Fury",
+      "primary_skills": "S",
+      "secondary_skills": "AGM"
+   }
+},
+ {
+   "id": 18,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Renegade Rat Ogre",
+      "cost": 150000,
+      "max_qty": 1,
+      "team": 3,
+      "ma": 6,
+      "st": 5,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Animal Savagery, Frenzy, Loner (4+), Mighty Blow (+1), Prehensile Tail",
+      "primary_skills": "S",
+      "secondary_skills": "AGM"
+   }
+},
+ {
+   "id": 19,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Dark Elf Lineman",
+      "cost": 70000,
+      "max_qty": 12,
+      "team": 4,
+      "ma": 6,
+      "st": 3,
+      "ag": 2,
+      "pa": 4,
+      "av": 9,
+      "skills": "",
+      "primary_skills": "AG",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 20,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Dark Elf Runner",
+      "cost": 80000,
+      "max_qty": 2,
+      "team": 4,
+      "ma": 7,
+      "st": 3,
+      "ag": 2,
+      "pa": 3,
+      "av": 8,
+      "skills": "Dump-off",
+      "primary_skills": "AGP",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 21,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Dark Elf Blitzer",
+      "cost": 100000,
+      "max_qty": 4,
+      "team": 4,
+      "ma": 7,
+      "st": 3,
+      "ag": 2,
+      "pa": 4,
+      "av": 9,
+      "skills": "Block",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 22,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Assassin",
+      "cost": 85000,
+      "max_qty": 2,
+      "team": 4,
+      "ma": 7,
+      "st": 3,
+      "ag": 2,
+      "pa": 5,
+      "av": 8,
+      "skills": "Shadowing, Stab",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 23,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Witch Elf",
+      "cost": 110000,
+      "max_qty": 2,
+      "team": 4,
+      "ma": 7,
+      "st": 3,
+      "ag": 2,
+      "pa": 5,
+      "av": 8,
+      "skills": "Dodge, Frenzy, Jump Up",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 24,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Dwarf Blocker Lineman",
+      "cost": 70000,
+      "max_qty": 12,
+      "team": 5,
+      "ma": 4,
+      "st": 3,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Block, Tackle, Thick Skull",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 25,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Dwarf Runner",
+      "cost": 85000,
+      "max_qty": 2,
+      "team": 5,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Sure Hands, Thick Skull",
+      "primary_skills": "GP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 26,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Dwarf Blitzer",
+      "cost": 80000,
+      "max_qty": 2,
+      "team": 5,
+      "ma": 5,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 10,
+      "skills": "Block, Thick Skull",
+      "primary_skills": "GS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 27,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Troll Slayer",
+      "cost": 95000,
+      "max_qty": 2,
+      "team": 5,
+      "ma": 5,
+      "st": 3,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Block, Dauntless, Frenzy, Thick Skull",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 28,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Deathroller",
+      "cost": 170000,
+      "max_qty": 1,
+      "team": 5,
+      "ma": 4,
+      "st": 7,
+      "ag": 5,
+      "pa": null,
+      "av": 11,
+      "skills": "Break Tackle, Dirty Player (+2), Juggernaut, Loner (5+), Mighty Blow (+1), No Hands, Secret Weapon, Stand Firm",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 29,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Elven Lineman",
+      "cost": 60000,
+      "max_qty": 12,
+      "team": 6,
+      "ma": 6,
+      "st": 3,
+      "ag": 2,
+      "pa": 4,
+      "av": 8,
+      "skills": "",
+      "primary_skills": "AG",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 30,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Elven Thrower",
+      "cost": 75000,
+      "max_qty": 2,
+      "team": 6,
+      "ma": 6,
+      "st": 3,
+      "ag": 2,
+      "pa": 2,
+      "av": 8,
+      "skills": "Pass",
+      "primary_skills": "AGP",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 31,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Elven Catcher",
+      "cost": 100000,
+      "max_qty": 4,
+      "team": 6,
+      "ma": 8,
+      "st": 3,
+      "ag": 2,
+      "pa": 4,
+      "av": 8,
+      "skills": "Catch, Nerves of Steel",
+      "primary_skills": "AG",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 32,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Elven Blitzer",
+      "cost": 115000,
+      "max_qty": 2,
+      "team": 6,
+      "ma": 7,
+      "st": 3,
+      "ag": 2,
+      "pa": 3,
+      "av": 9,
+      "skills": "Block, Side Step",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 33,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Goblin Lineman",
+      "cost": 40000,
+      "max_qty": 16,
+      "team": 7,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge, Right Stuff, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GPS"
+   }
+},
+ {
+   "id": 34,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Bomma",
+      "cost": 45000,
+      "max_qty": 1,
+      "team": 7,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Bombardier, Dodge, Secret Weapon, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GPS"
+   }
+},
+ {
+   "id": 35,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Looney",
+      "cost": 40000,
+      "max_qty": 1,
+      "team": 7,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": null,
+      "av": 8,
+      "skills": "Chainsaw, Secret Weapon, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 36,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Fanatic",
+      "cost": 70000,
+      "max_qty": 1,
+      "team": 7,
+      "ma": 3,
+      "st": 7,
+      "ag": 3,
+      "pa": null,
+      "av": 8,
+      "skills": "Ball & Chain, No Hands, Secret Weapon, Stunty",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 37,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Pogoer",
+      "cost": 75000,
+      "max_qty": 1,
+      "team": 7,
+      "ma": 7,
+      "st": 2,
+      "ag": 3,
+      "pa": 5,
+      "av": 8,
+      "skills": "Dodge, Pogo Stick, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GPS"
+   }
+},
+ {
+   "id": 38,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ooligan",
+      "cost": 65000,
+      "max_qty": 1,
+      "team": 7,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": 6,
+      "av": 8,
+      "skills": "Dirty Player (+1), Disturbing Presence, Dodge, Right Stuff, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GPS"
+   }
+},
+ {
+   "id": 39,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Doom Diver",
+      "cost": 60000,
+      "max_qty": 1,
+      "team": 7,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": 6,
+      "av": 8,
+      "skills": "Right Stuff, Stunty, Swoop",
+      "primary_skills": "A",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 40,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Trained Troll",
+      "cost": 115000,
+      "max_qty": 2,
+      "team": 7,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": 5,
+      "av": 10,
+      "skills": "Always Hungry, Loner (4+), Mighty Blow (+1), Projectile Vomit, Really Stupid, Regeneration, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AGP"
+   }
+},
+ {
+   "id": 41,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Halfling Hopeful Lineman",
+      "cost": 30000,
+      "max_qty": 16,
+      "team": 8,
+      "ma": 5,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 7,
+      "skills": "Dodge, Right Stuff, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 42,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Halfling Hefty",
+      "cost": 50000,
+      "max_qty": 2,
+      "team": 8,
+      "ma": 5,
+      "st": 2,
+      "ag": 3,
+      "pa": 3,
+      "av": 8,
+      "skills": "Dodge, Fend, Stunty",
+      "primary_skills": "AP",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 43,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Halfling Catcher",
+      "cost": 55000,
+      "max_qty": 2,
+      "team": 8,
+      "ma": 5,
+      "st": 2,
+      "ag": 3,
+      "pa": 5,
+      "av": 7,
+      "skills": "Catch, Dodge, Right Stuff, Sprint, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 44,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Altern Forest Treeman",
+      "cost": 120000,
+      "max_qty": 2,
+      "team": 8,
+      "ma": 2,
+      "st": 6,
+      "ag": 5,
+      "pa": 5,
+      "av": 11,
+      "skills": "Mighty Blow (+1), Stand Firm, Strong Arm, Take Root, Thick Skull, Throw Team-mate, Timmm-ber!",
+      "primary_skills": "S",
+      "secondary_skills": "AGP"
+   }
+},
+ {
+   "id": 45,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Human Lineman",
+      "cost": 50000,
+      "max_qty": 16,
+      "team": 9,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 46,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Human Thrower",
+      "cost": 80000,
+      "max_qty": 2,
+      "team": 9,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 2,
+      "av": 9,
+      "skills": "Pass, Sure Hands",
+      "primary_skills": "GP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 47,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Human Catcher",
+      "cost": 65000,
+      "max_qty": 4,
+      "team": 9,
+      "ma": 8,
+      "st": 2,
+      "ag": 3,
+      "pa": 5,
+      "av": 8,
+      "skills": "Catch, Dodge",
+      "primary_skills": "AG",
+      "secondary_skills": "SP"
+   }
+},
+ {
+   "id": 48,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Human Blitzer",
+      "cost": 85000,
+      "max_qty": 4,
+      "team": 9,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Block",
+      "primary_skills": "GS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 49,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Halfling Hopeful",
+      "cost": 30000,
+      "max_qty": 3,
+      "team": 9,
+      "ma": 5,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 7,
+      "skills": "Dodge, Right Stuff, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 50,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ogre",
+      "cost": 140000,
+      "max_qty": 1,
+      "team": 9,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Bone Head, Loner (4+), Mighty Blow (+1), Thick Skull, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 51,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Imperial Retainer Lineman",
+      "cost": 45000,
+      "max_qty": 12,
+      "team": 10,
+      "ma": 6,
+      "st": 3,
+      "ag": 4,
+      "pa": 4,
+      "av": 8,
+      "skills": "Fend",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 52,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Imperial Thrower",
+      "cost": 75000,
+      "max_qty": 2,
+      "team": 10,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 3,
+      "av": 9,
+      "skills": "Pass, Running Pass",
+      "primary_skills": "GP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 53,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Noble Blitzer",
+      "cost": 105000,
+      "max_qty": 2,
+      "team": 10,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Block, Catch",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 54,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Bodyguard",
+      "cost": 90000,
+      "max_qty": 4,
+      "team": 10,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 5,
+      "av": 9,
+      "skills": "Stand Firm, Wrestle",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 55,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ogre",
+      "cost": 140000,
+      "max_qty": 1,
+      "team": 10,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Bone Head, Loner (4+), Mighty Blow (+1), Thick Skull, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 56,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Skink Rnner Lineman",
+      "cost": 60000,
+      "max_qty": 12,
+      "team": 11,
+      "ma": 8,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GPS"
+   }
+},
+ {
+   "id": 57,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Chameleon Skink",
+      "cost": 70000,
+      "max_qty": 2,
+      "team": 11,
+      "ma": 7,
+      "st": 2,
+      "ag": 3,
+      "pa": 3,
+      "av": 8,
+      "skills": "Dodge, On the Ball, Shadowing, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GPS"
+   }
+},
+ {
+   "id": 58,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Saurus Blocker",
+      "cost": 85000,
+      "max_qty": 6,
+      "team": 11,
+      "ma": 6,
+      "st": 4,
+      "ag": 5,
+      "pa": 6,
+      "av": 10,
+      "skills": "",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 59,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Kroxigor",
+      "cost": 140000,
+      "max_qty": 1,
+      "team": 11,
+      "ma": 6,
+      "st": 5,
+      "ag": 5,
+      "pa": null,
+      "av": 10,
+      "skills": "Bone Head, Loner (4+), Mighty Blow (+1), Prehensile Tale, Thick Skull",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 60,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Zombie Lineman",
+      "cost": 40000,
+      "max_qty": 16,
+      "team": 12,
+      "ma": 4,
+      "st": 3,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Regeneration",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 61,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ghoul Runner",
+      "cost": 75000,
+      "max_qty": 2,
+      "team": 12,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 62,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Wraith",
+      "cost": 95000,
+      "max_qty": 2,
+      "team": 12,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": null,
+      "av": 9,
+      "skills": "Block, Foul Appearance, No Hands, Regeneration, Side Step",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 63,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Werewolf",
+      "cost": 125000,
+      "max_qty": 2,
+      "team": 12,
+      "ma": 8,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Claws, Frenzy, Regeneration",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 64,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Flesh Golem",
+      "cost": 115000,
+      "max_qty": 2,
+      "team": 12,
+      "ma": 4,
+      "st": 4,
+      "ag": 4,
+      "pa": null,
+      "av": 10,
+      "skills": "Regeneration, Stand Firm, Thick Skull",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 65,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Rotter Lineman",
+      "cost": 35000,
+      "max_qty": 12,
+      "team": 13,
+      "ma": 5,
+      "st": 3,
+      "ag": 4,
+      "pa": 6,
+      "av": 9,
+      "skills": "Decay, Plague Ridden",
+      "primary_skills": "GM",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 66,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Pestigor",
+      "cost": 75000,
+      "max_qty": 4,
+      "team": 13,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Horns, Plague Ridden, Regeneration",
+      "primary_skills": "GMS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 67,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Bloaters",
+      "cost": 115000,
+      "max_qty": 4,
+      "team": 13,
+      "ma": 4,
+      "st": 4,
+      "ag": 4,
+      "pa": 6,
+      "av": 10,
+      "skills": "Disturbing Presence, Foul Appearance, Plague Ridden, Regeneration",
+      "primary_skills": "GMS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 68,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Rotspawn",
+      "cost": 140000,
+      "max_qty": 1,
+      "team": 13,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": null,
+      "av": 10,
+      "skills": "Disturbing Presence, Foul Appearance, Loner (4+), Mighty Blow (+1), Plague Ridden, Really Stupid, Regeneration, Tentacles",
+      "primary_skills": "S",
+      "secondary_skills": "AGM"
+   }
+},
+ {
+   "id": 69,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Gnoblar Lineman",
+      "cost": 15000,
+      "max_qty": 16,
+      "team": 14,
+      "ma": 5,
+      "st": 1,
+      "ag": 3,
+      "pa": 5,
+      "av": 6,
+      "skills": "Dodge, Right Stuff, Side Step, Stunty, Titchy",
+      "primary_skills": "A",
+      "secondary_skills": "G"
+   }
+},
+ {
+   "id": 70,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ogre Runt Punter",
+      "cost": 145000,
+      "max_qty": 1,
+      "team": 14,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": 4,
+      "av": 10,
+      "skills": "Bone Head, Kick Team-mate, Mighty Blow (+1), Thick Skull",
+      "primary_skills": "PS",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 71,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ogre Blocker",
+      "cost": 140000,
+      "max_qty": 5,
+      "team": 14,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Bone Head, Mighty Blow (+1), Thick Skull, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AGP"
+   }
+},
+ {
+   "id": 72,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Human Lineman",
+      "cost": 50000,
+      "max_qty": 12,
+      "team": 15,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 73,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Human Thrower",
+      "cost": 80000,
+      "max_qty": 1,
+      "team": 15,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 3,
+      "av": 9,
+      "skills": "Animosity (all Dwarf and Halfling team-mates), Pass, Sure Hands",
+      "primary_skills": "GP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 74,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Human Catcher",
+      "cost": 65000,
+      "max_qty": 1,
+      "team": 15,
+      "ma": 8,
+      "st": 2,
+      "ag": 3,
+      "pa": 5,
+      "av": 8,
+      "skills": "Animosity (all Dwarf and Halfling team-mates), Catch, Dodge",
+      "primary_skills": "AG",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 75,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Human Blitzer",
+      "cost": 90000,
+      "max_qty": 1,
+      "team": 15,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Animosity (all Dwarf and Halfling team-mates), Block",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 76,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Dwarf Blocker",
+      "cost": 75000,
+      "max_qty": 2,
+      "team": 15,
+      "ma": 4,
+      "st": 3,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Arm Bar, Brawler, Loner (3+), Thick Skull",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 77,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Dwarf Runner",
+      "cost": 85000,
+      "max_qty": 1,
+      "team": 15,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Loner (3+), Sure Hands, Thick Skull",
+      "primary_skills": "GP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 78,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Dwarf Blitzer",
+      "cost": 80000,
+      "max_qty": 1,
+      "team": 15,
+      "ma": 5,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 10,
+      "skills": "Block, Loner (3+), Thick Skull",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 79,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Dwarf Troll Slayer",
+      "cost": 95000,
+      "max_qty": 1,
+      "team": 15,
+      "ma": 5,
+      "st": 3,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Block, Dauntless, Frenzy, Loner (3+), Thick Skull",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 80,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Old World Halfling Hopeful",
+      "cost": 30000,
+      "max_qty": 2,
+      "team": 15,
+      "ma": 5,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 7,
+      "skills": "Animosity (all Dwarf and Human team-mates), Dodge, Right Stuff, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 81,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ogre",
+      "cost": 140000,
+      "max_qty": 1,
+      "team": 15,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": 5,
+      "av": 10,
+      "skills": "Bone Head, Loner (4+), Mighty Blow (+1), Thick Skull, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 82,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Altern Forest Treeman",
+      "cost": 120000,
+      "max_qty": 1,
+      "team": 15,
+      "ma": 2,
+      "st": 6,
+      "ag": 5,
+      "pa": 5,
+      "av": 11,
+      "skills": "Mighty Blow (+1), Stand Firm, Strong Arm, Take Root, Thick Skull, Throw Team-mate, Timmm-ber!",
+      "primary_skills": "S",
+      "secondary_skills": "AGP"
+   }
+},
+ {
+   "id": 83,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Orc Lineman",
+      "cost": 50000,
+      "max_qty": 16,
+      "team": 16,
+      "ma": 5,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 10,
+      "skills": "Animosity (Orc Linemen)",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 84,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Orc Thrower",
+      "cost": 65000,
+      "max_qty": 2,
+      "team": 16,
+      "ma": 5,
+      "st": 3,
+      "ag": 3,
+      "pa": 3,
+      "av": 9,
+      "skills": "Animosity (all team-mates), Pass, Sure Hands",
+      "primary_skills": "GP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 85,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Orc Blitzer",
+      "cost": 80000,
+      "max_qty": 4,
+      "team": 16,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 10,
+      "skills": "Animosity (all team-mates), Block",
+      "primary_skills": "GS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 86,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Big Un Blocker",
+      "cost": 90000,
+      "max_qty": 4,
+      "team": 16,
+      "ma": 5,
+      "st": 4,
+      "ag": 4,
+      "pa": null,
+      "av": 10,
+      "skills": "Animosity (Big Un Blockers)",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 87,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Goblin",
+      "cost": 40000,
+      "max_qty": 4,
+      "team": 16,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge, Right Stuff, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 88,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Untrained Troll",
+      "cost": 115000,
+      "max_qty": 1,
+      "team": 16,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": 5,
+      "av": 10,
+      "skills": "Always Hungry, Loner (4+), Mighty Blow (+1), Projectile Vomit, Really Stupid, Regeneration, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AGP"
+   }
+},
+ {
+   "id": 89,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Skeleton Lineman",
+      "cost": 40000,
+      "max_qty": 12,
+      "team": 17,
+      "ma": 5,
+      "st": 3,
+      "ag": 4,
+      "pa": 6,
+      "av": 8,
+      "skills": "Regeneration, Thick Skull",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 90,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Zombie Lineman",
+      "cost": 40000,
+      "max_qty": 12,
+      "team": 17,
+      "ma": 4,
+      "st": 3,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Regeneration",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 91,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ghoul Runner",
+      "cost": 75000,
+      "max_qty": 4,
+      "team": 17,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 92,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Wight Blitzer",
+      "cost": 90000,
+      "max_qty": 2,
+      "team": 17,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 5,
+      "av": 9,
+      "skills": "Block, Regeneration",
+      "primary_skills": "GS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 93,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Mummies",
+      "cost": 125000,
+      "max_qty": 2,
+      "team": 17,
+      "ma": 3,
+      "st": 5,
+      "ag": 5,
+      "pa": null,
+      "av": 10,
+      "skills": "Mighty Blow (+1), Regeneration",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 94,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Skaven Clanrat Lineman",
+      "cost": 50000,
+      "max_qty": 16,
+      "team": 18,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "",
+      "primary_skills": "G",
+      "secondary_skills": "AMS"
+   }
+},
+ {
+   "id": 95,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Skaven Thrower",
+      "cost": 85000,
+      "max_qty": 2,
+      "team": 18,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 2,
+      "av": 8,
+      "skills": "Pass, Sure Hands",
+      "primary_skills": "GP",
+      "secondary_skills": "AMS"
+   }
+},
+ {
+   "id": 96,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Gutter Runner",
+      "cost": 85000,
+      "max_qty": 4,
+      "team": 18,
+      "ma": 9,
+      "st": 2,
+      "ag": 2,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge",
+      "primary_skills": "AG",
+      "secondary_skills": "MPS"
+   }
+},
+ {
+   "id": 97,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Skaven Blitzer",
+      "cost": 90000,
+      "max_qty": 2,
+      "team": 18,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 5,
+      "av": 9,
+      "skills": "Block",
+      "primary_skills": "GS",
+      "secondary_skills": "AMP"
+   }
+},
+ {
+   "id": 98,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Rat Ogre",
+      "cost": 150000,
+      "max_qty": 1,
+      "team": 18,
+      "ma": 6,
+      "st": 5,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Animal Savagery, Frenzy, Loner (4+), Mighty Blow (+1), Prehensile Tail",
+      "primary_skills": "S",
+      "secondary_skills": "AGM"
+   }
+},
+ {
+   "id": 99,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Snotling Lineman",
+      "cost": 15000,
+      "max_qty": 16,
+      "team": 19,
+      "ma": 5,
+      "st": 1,
+      "ag": 3,
+      "pa": 5,
+      "av": 6,
+      "skills": "Dodge, Right Stuff, Side Step, Stunty, Swarming, Titchy",
+      "primary_skills": "A",
+      "secondary_skills": "G"
+   }
+},
+ {
+   "id": 100,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Fungas Flinga",
+      "cost": 30000,
+      "max_qty": 2,
+      "team": 19,
+      "ma": 5,
+      "st": 1,
+      "ag": 3,
+      "pa": 4,
+      "av": 6,
+      "skills": "Bombardier, Dodge, Right Stuff, Secret Weapon, Side Step, Stunty",
+      "primary_skills": "AP",
+      "secondary_skills": "G"
+   }
+},
+ {
+   "id": 101,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Fun-hoppa",
+      "cost": 20000,
+      "max_qty": 2,
+      "team": 19,
+      "ma": 6,
+      "st": 1,
+      "ag": 3,
+      "pa": 5,
+      "av": 6,
+      "skills": "Dodge, Pogo Stick, Right Stuff, Side Step, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "G"
+   }
+},
+ {
+   "id": 102,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Stilty Runna",
+      "cost": 20000,
+      "max_qty": 2,
+      "team": 19,
+      "ma": 6,
+      "st": 1,
+      "ag": 3,
+      "pa": 5,
+      "av": 6,
+      "skills": "Dodge, Right Stuff, Side Step, Sprint, Stunty",
+      "primary_skills": "A",
+      "secondary_skills": "G"
+   }
+},
+ {
+   "id": 103,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Pump Wagon",
+      "cost": 105000,
+      "max_qty": 2,
+      "team": 19,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": null,
+      "av": 9,
+      "skills": "Dirty Player (+1), Juggernaut, Mighty Blow (+1), Really Stupid, Secret Weapon, Stand Firm",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 104,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Trained Troll",
+      "cost": 115000,
+      "max_qty": 2,
+      "team": 19,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": 5,
+      "av": 10,
+      "skills": "Always Hungry, Loner (3+), Mighty Blow (+1), Projectile Vomit, Really Stupid, Regeneration, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AGP"
+   }
+},
+ {
+   "id": 105,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Underworld Goblin Lineman",
+      "cost": 40000,
+      "max_qty": 12,
+      "team": 20,
+      "ma": 6,
+      "st": 2,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge, Right Stuff, Stunty",
+      "primary_skills": "AM",
+      "secondary_skills": "GS"
+   }
+},
+ {
+   "id": 106,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Underworld Snotling",
+      "cost": 15000,
+      "max_qty": 6,
+      "team": 20,
+      "ma": 5,
+      "st": 1,
+      "ag": 3,
+      "pa": 5,
+      "av": 6,
+      "skills": "Dodge, Right Stuff, Side Step, Stunty, Swarming, Titchy",
+      "primary_skills": "AM",
+      "secondary_skills": "G"
+   }
+},
+ {
+   "id": 107,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Skaven Clanrat",
+      "cost": 50000,
+      "max_qty": 3,
+      "team": 20,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Animosity (Underworld Goblin Linemen)",
+      "primary_skills": "GM",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 108,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Skaven Thrower",
+      "cost": 85000,
+      "max_qty": 1,
+      "team": 20,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 2,
+      "av": 8,
+      "skills": "Animosity (Underworld Goblin Linemen), Pass, Sure Hands",
+      "primary_skills": "GMP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 109,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Gutter Runner",
+      "cost": 85000,
+      "max_qty": 1,
+      "team": 20,
+      "ma": 9,
+      "st": 2,
+      "ag": 2,
+      "pa": 4,
+      "av": 8,
+      "skills": "Animosity (Underworld Goblin Linemen), Dodge",
+      "primary_skills": "AGM",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 110,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Skaven Blitzer",
+      "cost": 90000,
+      "max_qty": 1,
+      "team": 20,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 5,
+      "av": 9,
+      "skills": "Animosity (Underworld Goblin Linemen), Block",
+      "primary_skills": "GMS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 111,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Underworld Troll",
+      "cost": 115000,
+      "max_qty": 1,
+      "team": 20,
+      "ma": 4,
+      "st": 5,
+      "ag": 5,
+      "pa": 5,
+      "av": 10,
+      "skills": "Always Hungry, Loner (4+), Mighty Blow (+1), Projectile Vomit, Really Stupid, Regeneration, Throw Team-mate",
+      "primary_skills": "MS",
+      "secondary_skills": "AGP"
+   }
+},
+ {
+   "id": 112,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Mutant Rat Ogre",
+      "cost": 150000,
+      "max_qty": 1,
+      "team": 20,
+      "ma": 6,
+      "st": 5,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Animal Savagery, Frenzy, Loner (4+), Mighty Blow (+1), Prehensile Tail",
+      "primary_skills": "MS",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 113,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Wood Elf Lineman",
+      "cost": 70000,
+      "max_qty": 12,
+      "team": 21,
+      "ma": 7,
+      "st": 3,
+      "ag": 2,
+      "pa": 4,
+      "av": 8,
+      "skills": "",
+      "primary_skills": "AG",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 114,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Wood Elf Thrower",
+      "cost": 95000,
+      "max_qty": 2,
+      "team": 21,
+      "ma": 7,
+      "st": 3,
+      "ag": 2,
+      "pa": 2,
+      "av": 8,
+      "skills": "Pass",
+      "primary_skills": "AGP",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 115,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Wood Elf Catcher",
+      "cost": 90000,
+      "max_qty": 4,
+      "team": 21,
+      "ma": 8,
+      "st": 2,
+      "ag": 2,
+      "pa": 4,
+      "av": 8,
+      "skills": "Catch, Dodge",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 116,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Wardancer",
+      "cost": 125000,
+      "max_qty": 2,
+      "team": 21,
+      "ma": 8,
+      "st": 3,
+      "ag": 2,
+      "pa": 4,
+      "av": 8,
+      "skills": "Block, Dodge, Leap",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 117,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Loren Forest Treeman",
+      "cost": 120000,
+      "max_qty": 1,
+      "team": 21,
+      "ma": 2,
+      "st": 6,
+      "ag": 5,
+      "pa": 5,
+      "av": 11,
+      "skills": "Loner (4+), Mighty Blow (+1), Stand Firm, Strong Arm, Take Root, Thick Skull, Throw Team-mate",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 118,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Eagle Warrior Linewoman",
+      "cost": 50000,
+      "max_qty": 16,
+      "team": 22,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Dodge",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 119,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Python Warrior Thrower",
+      "cost": 80000,
+      "max_qty": 2,
+      "team": 22,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 3,
+      "av": 8,
+      "skills": "Dodge, On the Ball, Safe Pass",
+      "primary_skills": "GP",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 120,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Piranha Warrior Blitzer",
+      "cost": 90000,
+      "max_qty": 2,
+      "team": 22,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 5,
+      "av": 8,
+      "skills": "Dodge, Hit and Run, Jump Up",
+      "primary_skills": "AG",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 121,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Jaguar Warrior Blocker",
+      "cost": 110000,
+      "max_qty": 2,
+      "team": 22,
+      "ma": 6,
+      "st": 4,
+      "ag": 3,
+      "pa": 5,
+      "av": 9,
+      "skills": "Defensive, Dodge",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 122,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Norse Raider Lineman",
+      "cost": 50000,
+      "max_qty": 16,
+      "team": 23,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Block, Drunkard, Thick Skull",
+      "primary_skills": "G",
+      "secondary_skills": "APS"
+   }
+},
+ {
+   "id": 123,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Beer Boars",
+      "cost": 20000,
+      "max_qty": 2,
+      "team": 23,
+      "ma": 5,
+      "st": 1,
+      "ag": 3,
+      "pa": null,
+      "av": 6,
+      "skills": "Dodge, No Hands, Pick-me-up, Stunty, Titchy",
+      "primary_skills": "-",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 124,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Norse Berserker",
+      "cost": 90000,
+      "max_qty": 2,
+      "team": 23,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 5,
+      "av": 8,
+      "skills": "Block, Frenzy, Jump Up",
+      "primary_skills": "GS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 125,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Valkyrie",
+      "cost": 95000,
+      "max_qty": 2,
+      "team": 23,
+      "ma": 7,
+      "st": 3,
+      "ag": 3,
+      "pa": 3,
+      "av": 8,
+      "skills": "Catch, Dauntless, Pass, Strip Ball",
+      "primary_skills": "AGP",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 126,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Ulfwerener",
+      "cost": 105000,
+      "max_qty": 2,
+      "team": 23,
+      "ma": 6,
+      "st": 4,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Frenzy",
+      "primary_skills": "GS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 127,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Yhetee",
+      "cost": 140000,
+      "max_qty": 1,
+      "team": 23,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Claws, Disturbing Presence, Frenzy, Loner (4+), Unchannelled Fury",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 128,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Thrall Lineman",
+      "cost": 40000,
+      "max_qty": 16,
+      "team": 24,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "",
+      "primary_skills": "G",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 129,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Vampire Runner",
+      "cost": 100000,
+      "max_qty": 2,
+      "team": 24,
+      "ma": 8,
+      "st": 3,
+      "ag": 2,
+      "pa": 4,
+      "av": 8,
+      "skills": "Bloodlust (2+), Hypnotic Gaze, Regeneration",
+      "primary_skills": "AG",
+      "secondary_skills": "PS"
+   }
+},
+ {
+   "id": 130,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Vampire Thrower",
+      "cost": 110000,
+      "max_qty": 2,
+      "team": 24,
+      "ma": 6,
+      "st": 4,
+      "ag": 2,
+      "pa": 2,
+      "av": 9,
+      "skills": "Bloodlust (2+), Hypnotic Gaze, Pass, Regeneration",
+      "primary_skills": "AGP",
+      "secondary_skills": "S"
+   }
+},
+ {
+   "id": 131,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Vampire Blitzer",
+      "cost": 110000,
+      "max_qty": 2,
+      "team": 24,
+      "ma": 6,
+      "st": 4,
+      "ag": 2,
+      "pa": 5,
+      "av": 9,
+      "skills": "Bloodlust (3+), Hypnotic Gaze, Juggernaut, Regeneration",
+      "primary_skills": "AGS",
+      "secondary_skills": "-"
+   }
+},
+ {
+   "id": 132,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Vargheist",
+      "cost": 150000,
+      "max_qty": 1,
+      "team": 24,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": null,
+      "av": 10,
+      "skills": "Bloodlust (3+), Claws, Frenzy, Loner (4+), Regeneration",
+      "primary_skills": "S",
+      "secondary_skills": "AG"
+   }
+},
+ {
+   "id": 133,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Bloodborn Marauder Lineman",
+      "cost": 50000,
+      "max_qty": 16,
+      "team": 25,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 8,
+      "skills": "Frenzy",
+      "primary_skills": "GM",
+      "secondary_skills": "AS"
+   }
+},
+ {
+   "id": 134,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Khorngor",
+      "cost": 70000,
+      "max_qty": 4,
+      "team": 25,
+      "ma": 6,
+      "st": 3,
+      "ag": 3,
+      "pa": 4,
+      "av": 9,
+      "skills": "Horns, Juggernaut",
+      "primary_skills": "GMS",
+      "secondary_skills": "AP"
+   }
+},
+ {
+   "id": 135,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Bloodseeker",
+      "cost": 110000,
+      "max_qty": 4,
+      "team": 25,
+      "ma": 5,
+      "st": 4,
+      "ag": 4,
+      "pa": 6,
+      "av": 10,
+      "skills": "Frenzy",
+      "primary_skills": "GMS",
+      "secondary_skills": "A"
+   }
+},
+ {
+   "id": 136,
+   "model": "teams.position",
+   "fields": {
+      "position_name": "Bloodspawn",
+      "cost": 160000,
+      "max_qty": 1,
+      "team": 25,
+      "ma": 5,
+      "st": 5,
+      "ag": 4,
+      "pa": null,
+      "av": 9,
+      "skills": "Claws, Frenzy, Loner (4+), Mighty Blow (+1), Unchannelled Fury",
+      "primary_skills": "MS",
+      "secondary_skills": "AG"
+   }
+}
+]
