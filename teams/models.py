@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 
@@ -44,3 +45,47 @@ class Position(models.Model):
     def __str__(self):
         """ String method """
         return str(self.position_name)
+
+
+class MemberTeam(models.Model):
+    team_name = models.CharField(max_length=254)
+    manager = models.ForeignKey(
+        User, on_delete=models.SET_NULL, null=True, blank=True
+    )
+    team = models.ForeignKey('Team', null=False, blank=False, on_delete=models.CASCADE)
+    players = models.ForeignKey('Player', null=True, blank=True, on_delete=models.SET_NULL)
+
+
+    def __str__(self):
+        """ String method """
+        return self.team_name
+
+
+class Player(models.Model):
+    team_name = models.ForeignKey('MemberTeam', null=False, blank=False, on_delete=models.CASCADE)
+    player_name = models.CharField(max_length=254, null=True, blank=True)
+    position = models.ForeignKey('Position', null=False, blank=False, on_delete=models.CASCADE)
+    spp = models.IntegerField(null=True, blank=True)
+    ma = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(9)]
+    )
+    st = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(8)]
+    )
+    ag = models.IntegerField(
+        validators=[MinValueValidator(1), MaxValueValidator(6)]
+    )
+    pa = models.IntegerField(
+        null=True, blank=True,
+        validators=[MinValueValidator(1), MaxValueValidator(6)]
+    )
+    av = models.IntegerField(
+        validators=[MinValueValidator(3), MaxValueValidator(11)]
+    )
+    skills = models.TextField(null=True, blank=True) 
+    current_value = models.IntegerField()
+    
+
+    def __str__(self):
+        """ String method """
+        return self.player_name + ", " + str(self.team_name)
