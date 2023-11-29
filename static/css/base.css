@@ -110,6 +110,10 @@ main {
   }
 }
 @media (max-width: 991px) {
+  /* Move nav down slightly to avoid unsightly overlap with coloured header background */
+  nav {
+    top: 3px;
+  }
   /* Move menu left to prevent overflow off screen */
   #user-options-dropdown {
     left: -30px;
@@ -139,4 +143,9 @@ footer .copyright a {
 /*---------------------- Homepage ------------*/
 .header-container {
   margin-top: 260px;
+}
+
+/* ---- */
+.page-header {
+  margin-top: 65px;
 }/*# sourceMappingURL=base.css.map */
