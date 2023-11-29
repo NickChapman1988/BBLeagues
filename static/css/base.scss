@@ -170,3 +170,26 @@ footer {
 .page-header {
     margin-top: 120px;
 }
+
+.card-body {
+    color: $color-pale-blue;
+    .card-title {
+        text-shadow: 2px 2px $color-dark;
+        font-weight: 700;
+    }
+    .card-subtitle {
+        text-shadow: 1px 1px $color-dark;
+    }
+}
+
+.team-card-container:nth-child(2n+1) {
+    .card-body {
+        background: linear-gradient(#294f8d, #123056 )
+    }
+}
+
+.team-card-container:nth-child(2n) {
+    .card-body {
+        background: linear-gradient( #d23836, #840c0d)
+    }
+}

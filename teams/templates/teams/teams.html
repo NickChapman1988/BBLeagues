@@ -17,22 +17,37 @@
         <div class="row">
             <div class="col col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
                 {% if request.user.is_authenticated %}
-                    {% if teams == null %}
-                        <p>It doesn't look like you've created a team yet!</p>
-                    {% else %}
-                        {% for team in teams %}
-                        <div class="card team-card">
-                            <div class="card-body">
-                                <h5 class="card-title logo-font">{{ team.team_name }}</h5>
-                                <h6 class="card-subtitle mb-2 text-body-secondary">{{ team.team }}</h6>
-                                <p class="card-text">{{ team.player_qty}}/16 Players</p>
-                                <p class="card-text">{{ team.team_value }}TV</p>
+                    <div class="team-page-content"></div>
+                        {% if teams == null %}
+                            <p>It doesn't look like you've created a team yet!</p>
+                        {% else %}
+                        <p>
+                            Your teams are listed below. Click on a team to update it
+                        </p>
+                        <div class="team-card-container py-2">
+                            {% for team in teams %}
+                            <div class="card team-card my-2">
+                                <div class="card-body">
+                                    <h5 class="card-title logo-font">{{ team.team_name }}</h5>
+                                    <h6 class="card-subtitle mb-2 logo-font">{{ team.team }}</h6>
+                                    <p class="card-text logo-font d-flex justify-content-around">
+                                        <span class="text-start">{{ team.player_qty}}/16 Players</span>
+                                        <span class="text-end">{{ team.team_value }}TV</span>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        {% endfor %}                      
-                    {% endif %}
+                            {% endfor %} 
+                        </div>                     
+                        {% endif %}
+                        <a href="" class="btn btn-info my-3 logo-font">Create a New Team</a>
+                    </div>
                 {% else %}    
-                    <p>Create an account to start building a team!</p>
+                    <p>
+                        <a href="{% url 'account_login' %}" class="logo-font">Log in</a> 
+                        or 
+                        <a href="{% url 'account_signup' %}" class="logo-font">register an account</a> 
+                        to start building a team!
+                    </p>
                 {% endif %}
             </div>
         </div>

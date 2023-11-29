@@ -148,4 +148,23 @@ footer .copyright a {
 /* ---- */
 .page-header {
   margin-top: 120px;
+}
+
+.card-body {
+  color: #c9dfec;
+}
+.card-body .card-title {
+  text-shadow: 2px 2px #10122b;
+  font-weight: 700;
+}
+.card-body .card-subtitle {
+  text-shadow: 1px 1px #10122b;
+}
+
+.team-card-container:nth-child(2n) .card-body {
+  background: linear-gradient(#294f8d, #123056);
+}
+
+.team-card-container:nth-child(2n+1) .card-body {
+  background: linear-gradient(#d23836, #840c0d);
 }/*# sourceMappingURL=base.css.map */
