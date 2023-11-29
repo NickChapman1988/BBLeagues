@@ -2,21 +2,35 @@
 {% load static %}
 
 {% block page_header %}
-
+    <div class="container header-container pt-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="display-4 logo-font">
+                    My Teams
+                </h2>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 {% block content %}
     <div class="container main-page-text mt-5">
         <div class="row">
             <div class="col col-md-8 offset-md-2 col-lg-6 offset-lg-3 text-center">
-                <ul>
-                {% for team in teams %}
-                    <li>Team: {{ team }}</li>
-                    <li>Reroll Cost: {{ team.reroll_cost }}</li>
-                    <li>Special Rules: {{ team.special_rules }}</li>
-                    <li>Tier: {{ team.tier }}</li>
-                    <li>Apothecary: {{ team.apothecary }}</li>
-                {% endfor %}
-                </ul>
+                {% if request.user.is_authenticated %}
+                    {% if teams == null %}
+                        <p>It doesn't look like you've created a team yet!</p>
+                    {% else %}
+                        <ul>
+                        {% for team in teams %}
+                            <li>Team Name: {{ team.team_name }}</li>
+                            <li>Race: {{ team.team }}</li>
+                            <li>Manager: {{ team.manager }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% else %}    
+                    <p>Create an account to start building a team!</p>
+                {% endif %}
             </div>
         </div>
     </div>

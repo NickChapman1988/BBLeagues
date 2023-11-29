@@ -1,15 +1,16 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Team, Position
+from .models import Team, Position, MemberTeam, Player
 
 # Create your views here.
 
 
 def teams(request):
-    """ A view to return the index page """
+    """ A view to display the teams page, including user's teams """
+    teams = None
 
-    teams = Team.objects.all()
+    if request.user.is_authenticated:
+        teams = MemberTeam.objects.filter(manager=request.user)
     
-
     context = {
         'teams' : teams,
     }
