@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Count
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 
@@ -54,6 +55,13 @@ class MemberTeam(models.Model):
     )
     team = models.ForeignKey('Team', null=False, blank=False, on_delete=models.CASCADE)
     players = models.ForeignKey('Player', null=True, blank=True, on_delete=models.SET_NULL)
+    team_value = models.IntegerField(default=0)
+    reroll_qty = models.IntegerField(default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(8)]
+    )
+    player_qty = models.IntegerField(default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(16)]
+    )
 
 
     def __str__(self):
