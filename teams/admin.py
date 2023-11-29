@@ -20,7 +20,7 @@ class PositionAdmin(admin.ModelAdmin):
         'secondary_skills',
     )
 
-    ordering = ('team',)
+    ordering = ('id',)
 
 
 class TeamAdmin(admin.ModelAdmin):
@@ -53,6 +53,13 @@ class PlayerAdmin(admin.ModelAdmin):
         'player_name',
         'team_name',
         'position',
+        'ma',
+        'st',
+        'ag',
+        'pa',
+        'av',
+        'skills',
+        'spp',
     )
 
     ordering = ('team_name',)

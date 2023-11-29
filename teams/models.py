@@ -88,4 +88,4 @@ class Player(models.Model):
 
     def __str__(self):
         """ String method """
-        return self.player_name + ", " + str(self.team_name)
+        return self.player_name + ", " + str(self.position)
