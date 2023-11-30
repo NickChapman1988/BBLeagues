@@ -161,10 +161,14 @@ footer .copyright a {
   text-shadow: 1px 1px #10122b;
 }
 
-.team-card-container:nth-child(2n) .card-body {
+.team-card-container:nth-child(odd) .card-body {
   background: linear-gradient(#294f8d, #123056);
 }
 
-.team-card-container:nth-child(2n+1) .card-body {
+.team-card-container:nth-child(even) .card-body {
   background: linear-gradient(#d23836, #840c0d);
+}
+
+.pick-team-card:nth-child(even) {
+  background: linear-gradient(#294f8d, #123056);
 }/*# sourceMappingURL=base.css.map */

@@ -48,7 +48,7 @@ def pick_team(request):
 
     
 @login_required
-def add_member_team(request):
+def add_member_team(request, team):
     """ Add a new member team """
     if request.method == 'POST':
         form = MemberTeamForm(request.POST)
@@ -57,7 +57,7 @@ def add_member_team(request):
             team.manager = request.user
             team.save()
             messages.success(request, 'Successfully added team')
-            return redirect(reverse('team_detail', args=[team.id]))
+            return redirect(reverse('pick_team'))
 
         messages.error(
             request, 'Failed to add team. Please \

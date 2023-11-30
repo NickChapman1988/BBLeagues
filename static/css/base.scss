@@ -182,14 +182,19 @@ footer {
     }
 }
 
-.team-card-container:nth-child(2n+1) {
+.team-card-container:nth-child(odd) {
     .card-body {
-        background: linear-gradient(#294f8d, #123056 )
+        background: linear-gradient(#294f8d, #123056)
     }
 }
 
-.team-card-container:nth-child(2n) {
+.team-card-container:nth-child(even) {
     .card-body {
         background: linear-gradient( #d23836, #840c0d)
     }
+}
+
+
+.pick-team-card:nth-child(even) {
+    background: linear-gradient(#294f8d, #123056)
 }
