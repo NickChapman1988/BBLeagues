@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container page-header pt-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="display-4 logo-font">
+                    {{ team.team_name }}
+                </h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="container main-page-text mt-2">
+        <div class="row">
+            <div class="col col-lg-10 offset-lg-1">
+                <div class="team-card-container py-2">
+                    <div class="card team-card my-2">
+                        <div class="card-body">
+                            <h5 class="card-title logo-font text-center">{{ team.team }}</h5>
+                            <div class="d-flex justify-content-around">
+                                <p class="card-text logo-font d-flex flex-column">
+                                    <span>{{ team.player_qty }}/16 Players</span>
+                                    <span>Team Value: {{ team.team_value }}</span>
+                                    <span>Current Team Value: {{ team.current_team_value }}</span>
+                                    <br>
+                                    <span>Assistant Coaches: {{ team.assistant_coaches }}</span>
+                                    <span>Cheerleaders: {{ team.cheerleaders }}</span>
+                                    <span>Apothecary: {{ team.apothecary }}</span>
+                                    
+                                </p>
+                                <p class="card-text logo-font d-flex flex-column">
+                                    <span>Dedicated Fans: {{ team.dedicated_fans }}</span>
+                                    <span>Team Re-rolls: {{ team.reroll_qty }}</span>
+                                    <span>Treasury: {{ team.treasury }}GP</span>
+                                    <br>
+                                    <span>League Points: {{ team.league_points }}</span>
+                                    <span>Total Touchdowns: {{ team.total_touchdowns }}</span>
+                                    <span>Total Casualties: {{ team.total_casualties }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive mt-3">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">MA</th>
+                                <th scope="col">ST</th>
+                                <th scope="col">AG</th>
+                                <th scope="col">PA</th>
+                                <th scope="col">AV</th>
+                                <th scope="col">Skills</th>
+                                <th scope="col">SPP</th>
+                                <th scope="col">Current Value</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% for player in players %}
+                                <tr>
+                                    <td>{{ player.player_no }}</td>
+                                    <td>{{ player.player_name }}</td>
+                                    <td>{{ player.position }}</td>
+                                    <td>{{ player.ma }}</td>
+                                    <td>{{ player.st }}</td>
+                                    <td>{{ player.ag }}</td>
+                                    <td>{{ player.pa }}</td>
+                                    <td>{{ player.av }}</td>
+                                    <td>{{ player.skills }}</td>
+                                    <td>{{ player.spp }}</td>
+                                    <td>{{ player.current_value }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>                     
+                {% if team.player_qty < 16 %}        
+                    <a href="" class="btn btn-info my-3 logo-font">Hire a New Player</a>
+                {% endif %}
+            </div>       
+        </div>
+    </div>
+{% endblock %}

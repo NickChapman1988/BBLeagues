@@ -89,6 +89,9 @@ class MemberTeam(models.Model):
 class Player(models.Model):
     team_name = models.ForeignKey('MemberTeam', null=False, blank=False, on_delete=models.CASCADE)
     player_name = models.CharField(max_length=254, null=True, blank=True)
+    player_no = models.IntegerField(null=True, blank=True,
+        validators=[MinValueValidator(1), MaxValueValidator(16)]
+    )
     position = models.ForeignKey('Position', null=False, blank=False, on_delete=models.CASCADE)
     spp = models.IntegerField(null=True, blank=True)
     ma = models.IntegerField(
@@ -109,6 +112,7 @@ class Player(models.Model):
     )
     skills = models.TextField(null=True, blank=True) 
     current_value = models.IntegerField()
+    
     
 
     def __str__(self):

@@ -22,9 +22,11 @@ def team_detail(request, team_id):
     """ A view to show team details """
     # Get individual team
     team = get_object_or_404(MemberTeam, id=team_id)
+    players = Player.objects.filter(team_name=team_id)
 
     context = {
-        'team': team
+        'team': team,
+        'players': players,
     }
 
     return render(request, 'teams/team_detail.html', context)
