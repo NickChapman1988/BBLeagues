@@ -1,10 +1,10 @@
 """ Forms for the Teams app """
 
-from django import Forms
+from django import forms
 from .models import Team, Position, MemberTeam, Player
 
 
-class MemberTeamForm(form.ModelForm):
+class MemberTeamForm(forms.ModelForm):
     """ A form for new Member Teams """
 
 
