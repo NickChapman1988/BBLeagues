@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container page-header pt-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="display-4 logo-font">
+                    {{ team.team_name }}
+                </h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="container main-page-text mt-2">
+        <div class="row">
+            <div class="col col-lg-10 offset-lg-1">
+
+               
+                <form id="member-team-form" action="{% url 'add_member_team' %}" method="post" class="form mb-2">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        
+                    {% endfor %}
+                    <div class="text-end mt-2">
+                        <a href="{% url 'teams' %}" class="btn btn-blue rounded-0">Cancel</a>
+                        <button type="submit" class="btn btn-outline-black rounded-0" aria-label="Create Team">Create Team</button>
+                    </div>
+                </form>
+                
+            </div>       
+        </div>
+    </div>
+{% endblock %}

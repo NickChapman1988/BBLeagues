@@ -21,8 +21,10 @@ class MemberTeamForm(forms.ModelForm):
             "dedicated_fans",
         ]
     
+
     def __init__(self, *args, **kwargs):
         """ init method for MemberTeamForm """
         super().__init__(*args, **kwargs)
         teams = Team.objects.all()
-        self.fields['team'].choices = teams
+        races = [(team.id for team in teams)]
+        self.fields['team'].choices = races
