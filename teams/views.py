@@ -36,6 +36,18 @@ def team_detail(request, team_id):
 
 
 @login_required
+def pick_team(request):
+    """ Choose faction for new member team """
+    teams = Team.objects.all()
+
+    context = {
+        'teams': teams,
+    }
+
+    return render(request, 'teams/pick_team.html', context)
+
+    
+@login_required
 def add_member_team(request):
     """ Add a new member team """
     if request.method == 'POST':
