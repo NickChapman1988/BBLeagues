@@ -26,7 +26,7 @@
                         </p>
                         <div class="team-card-container py-2">
                             {% for team in teams %}
-                            <a href="{% url 'team_detail' team.id %}">
+                            <a href="{% url 'team_detail' team.id %}" class="text-decoration-none">
                                 <div class="card team-card my-2">
                                     <div class="card-body">
                                         <h5 class="card-title logo-font">{{ team.team_name }}</h5>
