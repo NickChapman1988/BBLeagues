@@ -16,3 +16,15 @@ def teams(request):
     }
     
     return render(request, 'teams/teams.html', context)
+
+
+def team_detail(request, team_id):
+    """ A view to show team details """
+    # Get individual team
+    team = get_object_or_404(MemberTeam, id=team_id)
+
+    context = {
+        'team': team
+    }
+
+    return render(request, 'teams/team_detail.html', context)

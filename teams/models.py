@@ -56,12 +56,29 @@ class MemberTeam(models.Model):
     team = models.ForeignKey('Team', null=False, blank=False, on_delete=models.CASCADE)
     players = models.ForeignKey('Player', null=True, blank=True, on_delete=models.SET_NULL)
     team_value = models.IntegerField(default=0)
+    current_team_value = models.IntegerField(default=0)
     reroll_qty = models.IntegerField(default=0,
         validators=[MinValueValidator(0), MaxValueValidator(8)]
     )
     player_qty = models.IntegerField(default=0,
         validators=[MinValueValidator(0), MaxValueValidator(16)]
     )
+    assistant_coaches = models.IntegerField(default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(6)]
+    )
+    cheerleaders = models.IntegerField(default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(12)]
+    )
+    apothecary = models.IntegerField(default=0,
+        validators=[MinValueValidator(0), MaxValueValidator(1)]
+    )
+    treasury = models.IntegerField(default=0)
+    dedicated_fans = models.IntegerField(default=1, 
+        validators=[MinValueValidator(1), MaxValueValidator(7)]
+    )
+    league_points = models.IntegerField(default=0)
+    total_touchdowns = models.IntegerField(default=0)
+    total_casualties = models.IntegerField(default=0)
 
 
     def __str__(self):
