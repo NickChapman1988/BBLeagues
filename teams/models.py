@@ -72,7 +72,7 @@ class MemberTeam(models.Model):
     apothecary = models.IntegerField(default=0,
         validators=[MinValueValidator(0), MaxValueValidator(1)]
     )
-    treasury = models.IntegerField(default=0)
+    treasury = models.IntegerField(default=1000000)
     dedicated_fans = models.IntegerField(default=1, 
         validators=[MinValueValidator(1), MaxValueValidator(7)]
     )

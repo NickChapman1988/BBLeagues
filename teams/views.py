@@ -1,5 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Team, Position, MemberTeam, Player
+from .forms import MemberTeamForm
+
 
 # Create your views here.
 
@@ -30,3 +33,30 @@ def team_detail(request, team_id):
     }
 
     return render(request, 'teams/team_detail.html', context)
+
+
+@login_required
+def add_member_team(request):
+    """ Add a new member team """
+    if request.method == 'POST':
+        form = MemberTeamForm(request.POST)
+        if form.is_valid():
+            team = form.save(commit=False)
+            team.manager = request.user
+            team.save()
+            messages.success(request, 'Successfully added team')
+            return redirect(reverse('team_detail', args=[team.id]))
+
+        messages.error(
+            request, 'Failed to add team. Please \
+            ensure the form is valid'
+        )
+    else:
+        form = MemberTeamForm()
+
+    template = 'teams/add_member_team.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
