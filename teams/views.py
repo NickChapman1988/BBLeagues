@@ -1,4 +1,5 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Team, Position, MemberTeam, Player
 from .forms import MemberTeamForm
@@ -50,14 +51,18 @@ def pick_team(request):
 @login_required
 def add_member_team(request, team_id):
     """ Add a new member team """
+    selected_team = get_object_or_404(Team, id=team_id)
+
     if request.method == 'POST':
         form = MemberTeamForm(request.POST)
+
         if form.is_valid():
             team = form.save(commit=False)
             team.manager = request.user
+            team.team = selected_team.team
             team.save()
             messages.success(request, 'Successfully added team')
-            return redirect(reverse('pick_team'))
+            return redirect(reverse('teams'))
 
         messages.error(
             request, 'Failed to add team. Please \
@@ -68,6 +73,7 @@ def add_member_team(request, team_id):
 
     template = 'teams/add_member_team.html'
     context = {
+        'team': selected_team,
         'form': form,
     }
 

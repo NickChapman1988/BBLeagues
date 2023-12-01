@@ -17,11 +17,14 @@
         <div class="row">
             <div class="col col-lg-10 offset-lg-1">
 
+
+
+                <h1>{{ team.team }}</h1>
                
-                <form id="member-team-form" action="{% url 'add_member_team' %}" method="post" class="form mb-2">
+                <form id="member-team-form" action="{% url 'add_member_team' team.id %}" method="post" class="form mb-2">
                     {% csrf_token %}
                     {% for field in form %}
-                        
+                        {{ field | as_crispy_field }}
                     {% endfor %}
                     <div class="text-end mt-2">
                         <a href="{% url 'teams' %}" class="btn btn-blue rounded-0">Cancel</a>

@@ -12,8 +12,7 @@ class MemberTeamForm(forms.ModelForm):
         """ Metadata for MemberTeamForm """
         model = MemberTeam
         fields = [
-            "team_name", 
-            "team", 
+            "team_name",  
             "reroll_qty", 
             "assistant_coaches", 
             "cheerleaders", 
@@ -21,10 +20,8 @@ class MemberTeamForm(forms.ModelForm):
             "dedicated_fans",
         ]
     
-
     def __init__(self, *args, **kwargs):
         """ init method for MemberTeamForm """
         super().__init__(*args, **kwargs)
-        teams = Team.objects.all()
-        races = [(team.id for team in teams)]
-        self.fields['team'].choices = races
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-black rounded-0'
