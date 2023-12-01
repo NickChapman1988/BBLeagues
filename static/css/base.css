@@ -172,4 +172,8 @@ footer .copyright a {
 
 .team-card-container div:nth-of-type(2n+1) .team-card {
   background: linear-gradient(#d23836, #840c0d);
+}
+
+.draft-rules-text li {
+  list-style: disc;
 }/*# sourceMappingURL=base.css.map */

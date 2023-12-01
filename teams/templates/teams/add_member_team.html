@@ -16,11 +16,28 @@
     <div class="container main-page-text mt-2">
         <div class="row">
             <div class="col col-lg-10 offset-lg-1">
+                <div class="team-card-container py-2">
+                    <div class="card team-detail-card my-2">
+                        <div class="card-body">
+                            <h5 class="card-title logo-font text-center mb-3">{{ team.team }}</h5>
+                            <div class="d-flex flex-column">
+                                <ul class="draft-rules-text">
+                                    <li class="card-text">Every Blood Bowl team must contain a minimum of eleven (11) permanently hired players when it is first drafted. </li>
+                                    <li class="card-text">No Blood Bowl team can ever contain more than sixteen (16) permanently hired players.</li>
+                                    <li class="card-text">Up to eight (8) Team Re-rolls can be purchased at a cost of {{ team.reroll_cost }}GP.</li>
+                                    <li class="card-text">During a league, additional Team Re-rolls may be purchased but teams must pay double the initial draft.</li>
+                                    <li class="card-text">Up to six (6) Assistant Coaches can be hired for a cost of 10,000GP each.</li>
+                                    <li class="card-text">Up to twelve (12) Cheerleaders can be hired for a cost of 10,000GP each.</li>
+                                    {% if team.apothecary == 'YES' %}
+                                        <li class="card-text">{{ team.team }} can hire one (1) Apothecary for 50,000GP</li>
+                                    {% endif %}
+                                    <li class="card-text">Every team starts with a Dedicated Fans value of 1. Additional Dedicated Fans can be purchased when drafting for 10,000GP each, up to a maximum of 6.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-
-                <h1>{{ team.team }}</h1>
-               
                 <form id="member-team-form" action="{% url 'add_member_team' team.id %}" method="post" class="form mb-2">
                     {% csrf_token %}
                     {% for field in form %}
@@ -31,8 +48,8 @@
                         <button type="submit" class="btn btn-outline-black rounded-0" aria-label="Create Team">Create Team</button>
                     </div>
                 </form>
-                
-            </div>       
+
+            </div>
         </div>
     </div>
 {% endblock %}
