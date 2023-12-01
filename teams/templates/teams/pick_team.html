@@ -16,18 +16,18 @@
 {% endblock %}
 {% block content %}
     <div class="container main-page-text mt-2">
-        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4 pick-team-container">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 team-card-container">
             {% for team in teams %}
-            <a href="{% url 'add_member_team' team.id %}" class="text-decoration-none">
-                <div class="col">
-                    <div class="card pick-team-card">
+            <div class="col">
+                <a href="{% url 'add_member_team' team.id %}" class="text-decoration-none">
+                    <div class="card team-card">
                         <div class="card-body text-center">
                             <h5 class="card-title logo-font">{{ team.team }} </h5>
                             <p class="card-text logo-font">Tier {{ team.tier }}</p>
                         </div>
-                    </div>
-                </div>
-            </a>
+                    </div> 
+                </a>
+            </div>
             {% endfor %}
         </div>
     </div>

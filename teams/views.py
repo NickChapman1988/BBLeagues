@@ -48,7 +48,7 @@ def pick_team(request):
 
     
 @login_required
-def add_member_team(request, team):
+def add_member_team(request, team_id):
     """ Add a new member team """
     if request.method == 'POST':
         form = MemberTeamForm(request.POST)

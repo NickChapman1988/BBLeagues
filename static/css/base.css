@@ -145,7 +145,7 @@ footer .copyright a {
   margin-top: 260px;
 }
 
-/* ---- */
+/* -------------------- Team Pages ---------------- */
 .page-header {
   margin-top: 120px;
 }
@@ -161,14 +161,15 @@ footer .copyright a {
   text-shadow: 1px 1px #10122b;
 }
 
-.team-card-container:nth-child(odd) .card-body {
-  background: linear-gradient(#294f8d, #123056);
-}
-
-.team-card-container:nth-child(even) .card-body {
+.team-detail-card {
   background: linear-gradient(#d23836, #840c0d);
 }
 
-.pick-team-card:nth-child(even) {
+/* Alternate background colours of team cards */
+.team-card-container div:nth-of-type(2n) .team-card {
   background: linear-gradient(#294f8d, #123056);
+}
+
+.team-card-container div:nth-of-type(2n+1) .team-card {
+  background: linear-gradient(#d23836, #840c0d);
 }/*# sourceMappingURL=base.css.map */

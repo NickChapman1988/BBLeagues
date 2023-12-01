@@ -14,6 +14,8 @@ $color-pale-blue: #c9dfec;
 $color-light: #f9f3f3;
 $color-dark: #10122b;
 $stripe-bg: linear-gradient(#294f8d 25%, #123056 50%, #d23836 50%, #840c0d 100%);
+$red-stripe: linear-gradient( #d23836, #840c0d);
+$blue-stripe: linear-gradient(#294f8d, #123056);
 
 
 body {
@@ -165,7 +167,7 @@ footer {
     margin-top: 260px;
 }
 
-/* ---- */
+/* -------------------- Team Pages ---------------- */
 
 .page-header {
     margin-top: 120px;
@@ -182,19 +184,18 @@ footer {
     }
 }
 
-.team-card-container:nth-child(odd) {
-    .card-body {
-        background: linear-gradient(#294f8d, #123056)
-    }
+.team-detail-card {
+    background: $red-stripe;
 }
 
-.team-card-container:nth-child(even) {
-    .card-body {
-        background: linear-gradient( #d23836, #840c0d)
-    }
+/* Alternate background colours of team cards */
+.team-card-container div:nth-of-type(2n) .team-card {
+    background: $blue-stripe;
+}
+
+.team-card-container div:nth-of-type(2n+1) .team-card {
+    background: $red-stripe;
 }
 
 
-.pick-team-card:nth-child(even) {
-    background: linear-gradient(#294f8d, #123056)
-}
+
