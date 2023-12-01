@@ -10,7 +10,7 @@ body {
   background-color: #f9f3f3;
   color: #10122b;
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
@@ -21,7 +21,7 @@ body {
 }
 
 main {
-  min-height: 100svh;
+  flex: 1 0 auto;
 }
 
 /*------------------------------------- Header ------------------------ */
@@ -126,10 +126,7 @@ main {
 /*---------------------- Footer ---------*/
 footer {
   background: linear-gradient(#294f8d 25%, #123056 50%, #d23836 50%, #840c0d 100%);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 96px;
+  flex-shrink: 0;
   color: #f9f3f3;
   font-family: "Graduate", serif;
   text-shadow: 1px 1px #10122b;

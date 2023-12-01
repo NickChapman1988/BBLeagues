@@ -22,7 +22,7 @@ body {
     background-color: $color-light;
     color: $color-dark;
     overflow-x: hidden;
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     font-family: 'Roboto', sans-serif;
@@ -33,7 +33,7 @@ body {
 }
 
 main {
-    min-height: 100svh;
+    flex: 1 0 auto;
 }
 
 /*------------------------------------- Header ------------------------ */
@@ -147,10 +147,7 @@ main {
 
 footer {
     background: $stripe-bg;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 96px;
+    flex-shrink: 0;
     color: $color-light;
     font-family: 'Graduate', serif;
     text-shadow: 1px 1px $color-dark;
