@@ -59,7 +59,7 @@ def add_member_team(request, team_id):
         if form.is_valid():
             team = form.save(commit=False)
             team.manager = request.user
-            team.team = selected_team.team
+            team.team = selected_team
             team.save()
             messages.success(request, 'Successfully added team')
             return redirect(reverse('teams'))
