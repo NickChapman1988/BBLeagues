@@ -29,7 +29,7 @@ main {
   position: fixed;
   top: 106px;
   right: 15px;
-  z-index: 99999999999;
+  z-index: 9999;
 }
 
 .custom-toast {

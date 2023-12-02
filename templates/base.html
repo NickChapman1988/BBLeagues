@@ -116,15 +116,15 @@
     <!-- Toasts Initialization JS -->
       <script>
         var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-        var toastList = toastElList.map(function (toastEl) {
-          var option = {
-            animation: false,
-            autohide: false,
-            delay: 5000,
-          }
-          var bsToast = new bootstrap.Toast(toastEl, option)
-          bsToast.show();
-        })
+          var toastList = toastElList.map(function (toastEl) {
+            var option = {
+              animation: false,
+              autohide: false,
+              delay: 5000,
+            }
+            var bsToast = new bootstrap.Toast(toastEl, option)
+            bsToast.show();
+          })
       </script>         
     {% endblock %}
   </body>
