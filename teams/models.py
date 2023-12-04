@@ -86,20 +86,18 @@ class MemberTeam(models.Model):
         return self.team_name
 
     
-    def calculate_treasury_and_tv(self):
+    def calculate_treasury_and_tv(self, reroll_cost):
         """ Calculate remaining treasury and team value after initial creation """
         initial_treasury = self.treasury
-        reroll_cost = Team.objects.filter(team).reroll_cost
         hiring_cost = 10000
         sideline_staff = self.cheerleaders + self.assistant_coaches + (self.dedicated_fans - 1)
-        initial_cost = (self.reroll_qty * reroll_cost) +
-            (sideline_staff * hiring_cost) +
-            (self.apothecary_qty * 50000)
+        initial_cost = (self.reroll_qty * reroll_cost) + (sideline_staff * hiring_cost) + (self.apothecary_qty * 50000)
         
         self.treasury = initial_treasury - initial_cost
         self.team_value = initial_cost / 1000
+        self.current_team_value = self.team_value
         self.save()
-        return self.treasury + "GP, " + self.team_value + "TV"   
+        return self.treasury    
 
 
 class Player(models.Model):

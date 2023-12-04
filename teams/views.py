@@ -52,6 +52,7 @@ def pick_team(request):
 def add_member_team(request, team_id):
     """ Add a new member team """
     selected_team = get_object_or_404(Team, id=team_id)
+    reroll_cost = selected_team.reroll_cost
 
     if request.method == 'POST':
         form = MemberTeamForm(request.POST)
@@ -60,8 +61,9 @@ def add_member_team(request, team_id):
             team = form.save(commit=False)
             team.manager = request.user
             team.team = selected_team
+            team.calculate_treasury_and_tv(reroll_cost)
             team.save()
-            messages.success(request, 'Successfully added team')
+            messages.success(request, 'Successfully added team')            
             return redirect(reverse('teams'))
 
         messages.error(

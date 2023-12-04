@@ -16,7 +16,7 @@ class MemberTeamForm(forms.ModelForm):
             "reroll_qty", 
             "assistant_coaches", 
             "cheerleaders", 
-            "apothecary", 
+            "apothecary_qty", 
             "dedicated_fans",
         ]
     
