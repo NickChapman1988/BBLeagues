@@ -69,7 +69,7 @@ class MemberTeam(models.Model):
     cheerleaders = models.IntegerField(default=0,
         validators=[MinValueValidator(0), MaxValueValidator(12)]
     )
-    apothecary = models.IntegerField(default=0,
+    apothecary_qty = models.IntegerField(default=0,
         validators=[MinValueValidator(0), MaxValueValidator(1)]
     )
     treasury = models.IntegerField(default=1000000)
@@ -84,6 +84,22 @@ class MemberTeam(models.Model):
     def __str__(self):
         """ String method """
         return self.team_name
+
+    
+    def calculate_treasury_and_tv(self):
+        """ Calculate remaining treasury and team value after initial creation """
+        initial_treasury = self.treasury
+        reroll_cost = Team.objects.filter(team).reroll_cost
+        hiring_cost = 10000
+        sideline_staff = self.cheerleaders + self.assistant_coaches + (self.dedicated_fans - 1)
+        initial_cost = (self.reroll_qty * reroll_cost) +
+            (sideline_staff * hiring_cost) +
+            (self.apothecary_qty * 50000)
+        
+        self.treasury = initial_treasury - initial_cost
+        self.team_value = initial_cost / 1000
+        self.save()
+        return self.treasury + "GP, " + self.team_value + "TV"   
 
 
 class Player(models.Model):
