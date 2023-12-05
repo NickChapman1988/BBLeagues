@@ -102,13 +102,17 @@
         </div>
       {% endif %}
     <main class="d-flex flex-column">
+    
     {% block page_header %}
     {% endblock %}
-
+    {% block body %}
     {% block content %}
-    {% endblock %}
+    {% endblock content %}
+    {% endblock body %}
+    {% block extra_body %}
+    {% endblock extra_body %}
     </main>
-    <footer class="container-fluid d-flex mt-5 py-3 justify-content-center align-items-center">
+    <footer class="container-fluid d-flex mt-5 py-3 justify-content-center align-items-center g-0">
       {% include 'includes/footer.html' %}
     </footer>
 

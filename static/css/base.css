@@ -53,11 +53,11 @@ main {
   right: 36px;
 }
 
+/* Convenience classes - colors copied from Bootstrap */
 .arrow-success {
-  border-bottom-color: #228CDB !important;
+  border-bottom-color: #198754 !important;
 }
 
-/* Convenience classes - colors copied from Bootstrap */
 .arrow-danger {
   border-bottom-color: #dc3545 !important;
 }
@@ -186,6 +186,11 @@ footer .copyright a {
 /*---------------------- Homepage ------------*/
 .header-container {
   margin-top: 260px;
+}
+
+/*--------------------- Allauth ------------------- */
+.allauth-header {
+  margin-top: 180px;
 }
 
 /* -------------------- Team Pages ---------------- */
