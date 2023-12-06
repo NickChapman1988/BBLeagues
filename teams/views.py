@@ -80,3 +80,47 @@ def add_member_team(request, team_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def add_member_player(request, team_id):
+    """ Add a new player to a member team """
+
+    team = get_object_or_404(MemberTeam, id=team_id)
+    faction = get_object_or_404(Team, id=team.team)
+    
+    if request.method == 'POST':
+        form = AddPlayerForm(request.POST)
+
+        if form.is_valid():
+            player = form.save(commit=False)
+            selected_position = player.position
+            position = get_object_or_404(Position, id=selected_position)
+            player.ma = position.ma
+            player.st = position.st
+            player.ag = position.ag
+            player.pa = position.pa
+            player.av = position.av
+            player.skills = position.skills
+            player.current_value = position.cost
+            player.team_name = team.team_name
+            player.spp = 0
+            player.save()
+            messages.success(request, 'Successfully added' + player.player_name + 'to' + player.team_name)            
+            return redirect(reverse('team_detail', args=[team.id]))
+            
+        messages.error(
+            request, 'Failed to add player. Please \
+            ensure the form is valid'
+        )
+    else:
+        form = AddPlayerFormForm()
+
+    template = 'teams/add_member_player.html'
+    context = {
+        'team': team,
+        'faction': faction
+        'form': form,
+    }
+
+    return render(request, template, context)
