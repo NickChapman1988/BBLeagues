@@ -88,6 +88,7 @@ def add_member_player(request, team_id):
 
     team = get_object_or_404(MemberTeam, id=team_id)
     faction = get_object_or_404(Team, id=team.team)
+    positions = Position.objects.filter(id=faction)
     
     if request.method == 'POST':
         form = AddPlayerForm(request.POST)
@@ -119,7 +120,8 @@ def add_member_player(request, team_id):
     template = 'teams/add_member_player.html'
     context = {
         'team': team,
-        'faction': faction
+        'faction': faction,
+        'positions': positions,
         'form': form,
     }
 

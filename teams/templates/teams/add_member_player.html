@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container page-header pt-5">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="display-4 logo-font">
+                    {{ team.team_name }}
+                </h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="container main-page-text mt-2">
+        <div class="row">
+            <div class="col col-lg-10 offset-lg-1">
+                <div class="team-card-container py-2">
+                    <div class="card team-detail-card my-2">
+                        <div class="card-body">
+                            <h5 class="card-title logo-font text-center mb-3">Add New Player</h5>
+                            <div class="table-responsive mt-3">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr class="logo-font">
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Position</th>
+                                            <th scope="col">MA</th>
+                                            <th scope="col">ST</th>
+                                            <th scope="col">AG</th>
+                                            <th scope="col">PA</th>
+                                            <th scope="col">AV</th>
+                                            <th scope="col">Skills</th>
+                                            <th scope="col">SPP</th>
+                                            <th scope="col">Current Value</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for position in positions %}
+                                            <tr>
+                                                <td>{{ position.position_name }}</td>
+                                                <td>{{ position.ma }}</td>
+                                                <td>{{ position.st }}</td>
+                                                <td>{{ position.ag }}</td>
+                                                <td>{{ position.pa }}</td>
+                                                <td>{{ position.av }}</td>
+                                                <td>{{ position.skills }}</td>
+                                                <td>{{ position.cost }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="member-team-form" action="{% url 'add_member_player' team.id %}" method="post" class="form mb-2">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {{ field | as_crispy_field }}
+                    {% endfor %}
+                    <div class="text-end mt-2">
+                        <a href="{% url 'team_detail' team.id %}" class="btn bg-red-grad">Cancel</a>
+                        <button type="submit" class="btn bg-blue-grad" aria-label="Add Player">Add Player</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
