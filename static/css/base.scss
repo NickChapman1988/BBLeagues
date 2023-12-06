@@ -36,6 +36,16 @@ main {
     flex: 1 0 auto;
 }
 
+.bg-blue-grad {
+    background: $blue-stripe;
+    color: $color-pale-blue;
+}
+
+.bg-red-grad {
+    background: $red-stripe;
+    color: $color-pale-blue;
+}
+
 /* ------------------------- BS Toasts */
 
 .message-container {

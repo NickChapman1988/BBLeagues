@@ -24,6 +24,16 @@ main {
   flex: 1 0 auto;
 }
 
+.bg-blue-grad {
+  background: linear-gradient(#294f8d, #123056);
+  color: #c9dfec;
+}
+
+.bg-red-grad {
+  background: linear-gradient(#d23836, #840c0d);
+  color: #c9dfec;
+}
+
 /* ------------------------- BS Toasts */
 .message-container {
   position: fixed;
