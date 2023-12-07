@@ -39,14 +39,10 @@ class AddPlayerForm(forms.ModelForm):
             "position",
         ]
     
-    def __init__(self, request, team_id, *args, **kwargs):
-        """ init method for AddPlayerForm """
+    def __init__(self, *args, **kwargs):
+        """ init method for AddPlayerForm """     
         super().__init__(*args, **kwargs)
-        member_team = get_object_or_404(MemberTeam, id=team_id)
-        positions = Position.objects.filter(team=member_team.team)
-        players = [(p.id, p.position_name) for p in positions]
 
-        self.fields['position'].choices = players
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
             

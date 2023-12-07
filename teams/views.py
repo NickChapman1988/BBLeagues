@@ -89,16 +89,16 @@ def add_member_player(request, team_id):
     team = get_object_or_404(MemberTeam, id=team_id)
     faction = get_object_or_404(Team, team=team.team)
     positions = Position.objects.filter(team=faction)
+    players = [(p.id, p.position_name) for p in positions]
     
     if request.method == 'POST':
         
-        form = AddPlayerForm(request.POST, team_id=team.id)
-        
+        form = AddPlayerForm(request.POST)
 
         if form.is_valid():
             player = form.save(commit=False)
             selected_position = player.position
-            position = get_object_or_404(Position, id=selected_position)
+            position = get_object_or_404(Position, id=selected_position.id)
             player.ma = position.ma
             player.st = position.st
             player.ag = position.ag
@@ -106,10 +106,10 @@ def add_member_player(request, team_id):
             player.av = position.av
             player.skills = position.skills
             player.current_value = position.cost
-            player.team_name = team.team_name
+            player.team_name = team
             player.spp = 0
             player.save()
-            messages.success(request, 'Successfully added player')            
+            messages.success(request, 'Successfully added player "' + player.player_name + '" to "' + team.team_name + '"')            
             return redirect(reverse('team_detail', args=[team.id]))
             
         messages.error(
@@ -125,6 +125,7 @@ def add_member_player(request, team_id):
         'faction': faction,
         'positions': positions,
         'form': form,
+        'players': players
     }
 
     return render(request, template, context)
