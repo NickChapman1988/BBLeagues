@@ -2,7 +2,7 @@ from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Team, Position, MemberTeam, Player
-from .forms import MemberTeamForm
+from .forms import MemberTeamForm, AddPlayerForm
 
 
 # Create your views here.
@@ -87,11 +87,13 @@ def add_member_player(request, team_id):
     """ Add a new player to a member team """
 
     team = get_object_or_404(MemberTeam, id=team_id)
-    faction = get_object_or_404(Team, id=team.team)
-    positions = Position.objects.filter(id=faction)
+    faction = get_object_or_404(Team, team=team.team)
+    positions = Position.objects.filter(team=faction)
     
     if request.method == 'POST':
-        form = AddPlayerForm(request.POST)
+        
+        form = AddPlayerForm(request.POST, team_id=team.id)
+        
 
         if form.is_valid():
             player = form.save(commit=False)
@@ -107,7 +109,7 @@ def add_member_player(request, team_id):
             player.team_name = team.team_name
             player.spp = 0
             player.save()
-            messages.success(request, 'Successfully added' + player.player_name + 'to' + player.team_name)            
+            messages.success(request, 'Successfully added player')            
             return redirect(reverse('team_detail', args=[team.id]))
             
         messages.error(
@@ -115,7 +117,7 @@ def add_member_player(request, team_id):
             ensure the form is valid'
         )
     else:
-        form = AddPlayerFormForm()
+        form = AddPlayerForm()
 
     template = 'teams/add_member_player.html'
     context = {

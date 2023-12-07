@@ -1,6 +1,7 @@
 """ Forms for the Teams app """
 
 from django import forms
+from django.shortcuts import get_object_or_404
 from .models import Team, Position, MemberTeam, Player
 
 
@@ -38,11 +39,11 @@ class AddPlayerForm(forms.ModelForm):
             "position",
         ]
     
-    def __init__(self, *args, **kwargs):
+    def __init__(self, request, team_id, *args, **kwargs):
         """ init method for AddPlayerForm """
         super().__init__(*args, **kwargs)
         member_team = get_object_or_404(MemberTeam, id=team_id)
-        positions = Position.objects.filter(team=member_team)
+        positions = Position.objects.filter(team=member_team.team)
         players = [(p.id, p.position_name) for p in positions]
 
         self.fields['position'].choices = players
