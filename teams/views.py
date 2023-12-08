@@ -61,7 +61,8 @@ def add_member_team(request, team_id):
             team = form.save(commit=False)
             team.manager = request.user
             team.team = selected_team
-            team.calculate_treasury_and_tv(reroll_cost)
+            team.calculate_initial_treasury(reroll_cost)
+            team.calculate_team_value(reroll_cost)
             team.save()
             messages.success(request, 'Successfully added team')            
             return redirect(reverse('teams'))
@@ -88,6 +89,7 @@ def add_member_player(request, team_id):
 
     team = get_object_or_404(MemberTeam, id=team_id)
     faction = get_object_or_404(Team, team=team.team)
+    reroll_cost = faction.reroll_cost
     positions = Position.objects.filter(team=faction)
     players = [(p.id, p.position_name) for p in positions]
     
@@ -109,6 +111,8 @@ def add_member_player(request, team_id):
             player.team_name = team
             player.spp = 0
             player.save()
+            team.calculate_team_value(reroll_cost)
+
             messages.success(request, 'Successfully added player "' + player.player_name + '" to "' + team.team_name + '"')            
             return redirect(reverse('team_detail', args=[team.id]))
             
