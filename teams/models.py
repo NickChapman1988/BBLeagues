@@ -113,6 +113,17 @@ class MemberTeam(models.Model):
         self.save()
         return self.current_team_value
 
+    
+    def recalculate_treasury(self, player_cost):
+        """ Recalculate treasury after player purchase """
+        initial_treasury = self.treasury
+        self.treasury = initial_treasury - player_cost
+        # increase team player count with each player purchase
+        player_count = self.player_qty
+        self.player_qty = player_count + 1
+        self.save()
+        return self.treasury
+
 
 class Player(models.Model):
     team_name = models.ForeignKey('MemberTeam', null=False, blank=False, on_delete=models.CASCADE)

@@ -110,8 +110,10 @@ def add_member_player(request, team_id):
             player.current_value = position.cost
             player.team_name = team
             player.spp = 0
+            player_cost = position.cost
             player.save()
             team.calculate_team_value(reroll_cost)
+            team.recalculate_treasury(player_cost)
 
             messages.success(request, 'Successfully added player "' + player.player_name + '" to "' + team.team_name + '"')            
             return redirect(reverse('team_detail', args=[team.id]))
