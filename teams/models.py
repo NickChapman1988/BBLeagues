@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import get_object_or_404
 from django.db.models import Count
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
@@ -101,11 +102,12 @@ class MemberTeam(models.Model):
     def calculate_team_value(self, reroll_cost):
         """ Calculate team value """
         hiring_cost = 10000
+        team = get_object_or_404(MemberTeam, id=self.id)
         player_costs = 0
-        if self.players != None:
-            for player in self.players():
-                player_costs += player.player_value
-                
+        players = Player.objects.filter(team_name=team)
+        for player in players:
+            player_costs += player.current_value
+        
         sideline_staff = self.cheerleaders + self.assistant_coaches + self.dedicated_fans
         total = (self.reroll_qty * reroll_cost) + (sideline_staff * hiring_cost) + (self.apothecary_qty * 50000) + player_costs
         self.team_value = total / 1000
@@ -156,4 +158,4 @@ class Player(models.Model):
 
     def __str__(self):
         """ String method """
-        return self.player_name + ", " + str(self.position)
+        return str(self.player_name) + ", " + str(self.position)

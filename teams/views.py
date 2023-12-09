@@ -91,7 +91,7 @@ def add_member_player(request, team_id):
     faction = get_object_or_404(Team, team=team.team)
     reroll_cost = faction.reroll_cost
     positions = Position.objects.filter(team=faction)
-    players = [(p.id, p.position_name) for p in positions]
+    players = Player.objects.filter(team_name=team)
     
     if request.method == 'POST':
         
