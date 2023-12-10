@@ -98,25 +98,31 @@ def add_member_player(request, team_id):
         form = AddPlayerForm(request.POST)
 
         if form.is_valid():
-            player = form.save(commit=False)
-            selected_position = player.position
-            position = get_object_or_404(Position, id=selected_position.id)
-            player.ma = position.ma
-            player.st = position.st
-            player.ag = position.ag
-            player.pa = position.pa
-            player.av = position.av
-            player.skills = position.skills
-            player.current_value = position.cost
-            player.team_name = team
-            player.spp = 0
-            player_cost = position.cost
-            player.save()
-            team.calculate_team_value(reroll_cost)
-            team.recalculate_treasury(player_cost)
+            if team.player_qty < 16:
+                player = form.save(commit=False)
+                selected_position = player.position
+                position = get_object_or_404(Position, id=selected_position.id)
+                player.ma = position.ma
+                player.st = position.st
+                player.ag = position.ag
+                player.pa = position.pa
+                player.av = position.av
+                player.skills = position.skills
+                player.current_value = position.cost
+                player.team_name = team
+                player.spp = 0
+                player_cost = position.cost
+                player.save()
+                team.calculate_team_value(reroll_cost)
+                team.recalculate_treasury(player_cost)
 
-            messages.success(request, 'Successfully added player "' + player.player_name + '" to "' + team.team_name + '"')            
-            return redirect(reverse('team_detail', args=[team.id]))
+                messages.success(request, 'Successfully added player "' + player.player_name + '" to "' + team.team_name + '"')            
+                return redirect(reverse('team_detail', args=[team.id]))
+            
+            else:
+                messages.error(
+                    request, 'You have already added the maximum number of players to this team!'
+                )
             
         messages.error(
             request, 'Failed to add player. Please \
