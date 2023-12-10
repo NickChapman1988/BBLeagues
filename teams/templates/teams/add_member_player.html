@@ -25,6 +25,7 @@
                                     <thead>
                                         <tr class="logo-font">
                                             <th scope="col">Position</th>
+                                            <th scope="col">Qty</th>
                                             <th scope="col">MA</th>
                                             <th scope="col">ST</th>
                                             <th scope="col">AG</th>
@@ -38,6 +39,7 @@
                                         {% for position in positions %}
                                             <tr>
                                                 <td>{{ position.position_name }}</td>
+                                                <td>0 - {{ position.max_qty }}</td>
                                                 <td>{{ position.ma }}</td>
                                                 <td>{{ position.st }}</td>
                                                 <td>{{ position.ag }}</td>
