@@ -84,6 +84,51 @@ def add_member_team(request, team_id):
 
 
 @login_required
+def edit_member_team(request, team_id):
+    """ Edit new member team """
+
+    team = get_object_or_404(MemberTeam, id=team_id)
+    selected_team = get_object_or_404(Team, team=team.team)
+    reroll_cost = selected_team.reroll_cost
+    assistant_coaches = team.assistant_coaches
+    cheerleaders = team.cheerleaders
+    apothecary = team.apothecary_qty
+    dedicated_fans = team.dedicated_fans
+    reroll_qty = team.reroll_qty
+
+    if request.method == 'POST':
+        form = MemberTeamForm(request.POST, instance=team)
+
+        if form.is_valid():
+            team_edit = form.save(commit=False)
+            team_edit.team = selected_team
+            team_edit.league_points = team.league_points
+            team_edit.total_casualties = team.total_casualties
+            team_edit.total_touchdowns = team.total_touchdowns
+            team_edit.edit_recalculate_treasury(reroll_cost, reroll_qty, assistant_coaches, cheerleaders, apothecary)
+            team_edit.calculate_team_value(reroll_cost)
+            team_edit.save()
+            messages.success(request, 'Successfully edited ' + team.team_name)            
+            return redirect(reverse('team_detail', args=[team.id]))
+
+        messages.error(
+            request, 'Failed to update team. Please \
+            ensure the form is valid'
+        )
+    else:
+        form = MemberTeamForm(instance=team)
+        messages.info(request, f'You are editing {team.team_name}')
+
+    template = 'teams/edit_member_team.html'
+    context = {
+        'team': team,
+        'faction': selected_team,
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+@login_required
 def add_member_player(request, team_id):
     """ Add a new player to a member team """
 

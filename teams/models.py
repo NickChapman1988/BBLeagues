@@ -126,6 +126,29 @@ class MemberTeam(models.Model):
         self.save()
         return self.treasury
 
+    
+    def edit_recalculate_treasury(self, reroll_cost, reroll_qty, assistant_coaches, cheerleaders, apothecary):
+        """ Recalculate treasury after editing team """
+        initial_treasury = self.treasury
+        hiring_cost = 10000
+        initial_staff = cheerleaders + assistant_coaches
+        initial_rerolls = reroll_qty
+        costs = 0
+        if self.reroll_qty != initial_rerolls:
+            new_rerolls = self.reroll_qty - initial_rerolls
+            costs = new_rerolls * reroll_cost
+        staff_costs = 0
+        new_staff = self.cheerleaders + self.assistant_coaches
+        if new_staff != initial_staff:
+            staff_costs = (new_staff - initial_staff) * hiring_cost
+        apoc_cost = 0
+        if self.apothecary_qty != apothecary:
+            apoc_cost = 50000
+        
+        total = costs + staff_costs + apoc_cost
+        self.treasury = initial_treasury - total
+        self.save()
+
 
 class Player(models.Model):
     team_name = models.ForeignKey('MemberTeam', null=False, blank=False, on_delete=models.CASCADE)
