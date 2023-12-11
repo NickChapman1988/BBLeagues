@@ -128,6 +128,25 @@ def edit_member_team(request, team_id):
 
     return render(request, template, context)
 
+
+@login_required
+def delete_member_team(request, team_id):
+    """ Delete member team """
+    
+    team = get_object_or_404(MemberTeam, id=team_id)
+    players = Player.objects.filter(team_name=team_id)
+
+    if not request.user.is_superuser or request.user.username == team.manager:
+        messages.error(request, "Sorry, you don't have permission to do that")
+        return redirect(reverse('home'))
+
+    if players:
+        players.delete()
+    team.delete()
+    messages.success(request, 'Team deleted')
+    return redirect(reverse('teams'))
+
+
 @login_required
 def add_member_player(request, team_id):
     """ Add a new player to a member team """
