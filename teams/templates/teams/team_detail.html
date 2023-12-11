@@ -43,9 +43,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="text-end mt-2">
-                        <a href="{% url 'edit_member_team' team.id %}" class="btn bg-blue-grad my-3 logo-font">Edit Team Details</a>
-                    </div>
+                    {% if request.user == team.manager %}
+                        <div class="text-end mt-2">
+                            <a href="{% url 'edit_member_team' team.id %}" class="btn bg-blue-grad my-3 logo-font">Edit Team Details</a>
+                        </div>
+                    {% endif %}
                     <div class="table-responsive mt-3">
                         <table class="table table-striped">
                             <thead>
